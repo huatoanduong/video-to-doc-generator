@@ -1,0 +1,10 @@
+# Required packages for the MP3 to Whisper transcription pipeline
+# Note: ffmpeg and whisper need to be installed separately
+
+# Python packages
+pathlib  # For path operations (included in Python 3.4+)
+argparse  # For command line arguments (included in Python 3.2+)
+
+# Optional: for better logging and progress tracking
+tqdm>=4.64.0  # Progress bars
+colorama>=0.4.4  # Colored terminal output
