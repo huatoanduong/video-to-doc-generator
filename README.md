@@ -26,6 +26,16 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Convert mp4 to mp3
+```
+ffmpeg -i filename.mp4 filename.mp3
+```
+
+### Split a mp3 file into chunks
+```
+ffmpeg -i "path/to/mp3" -c copy -map 0 -segment_time 00:10:00 -f segment output%03d.mp3
+```
+
 ### Basic Usage
 ```bash
 python whisper/whisper_script.py "path/to/mp3/folder"
@@ -36,9 +46,10 @@ python whisper/whisper_script.py "path/to/mp3/folder"
 python whisper/whisper_script.py "path/to/mp3/folder" \
     --output-dir "custom_output" \
     --segment-time "00:15:00" \
-    --language "en" \
-    --model "medium" \
+    --language "vi" \
+    --model "large" \
     --device "cpu"
+    --word_timestamps True 
 ```
 
 ### Parameters

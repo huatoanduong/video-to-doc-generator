@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:05,680
+giám sát học không có giám sát và học thông qua tương tác với lại cái môi trường thực tế thì
+
+2
+00:00:07,820 --> 00:00:11,320
+Bên cạnh đó thì nhưng mình sẽ có phần kết hợp ở đây nhưng mà mình đang chia sẻ là kết hợp giữa
+
+3
+00:00:11,320 --> 00:00:18,680
+xe mi xe mi xe mi vừa kết hợp giám sát vừa kết hợp không giám sát ha là tổng thể bức tranh của mình
+
+4
+00:00:18,680 --> 00:00:24,560
+về cái motion learning thì đối với trường hợp mà ở supervised learning thì giống như lúc nãy mình
+
+5
+00:00:24,560 --> 00:00:30,000
+có định nghĩa ban đầu thì nôm na là mình sẽ có dữ liệu mình có dữ liệu nhưng mà dữ liệu của mình
+
+6
+00:00:30,000 --> 00:00:35,360
+nó chưa được gán nhãn thì trường hợp này mình ví dụ là giả sử bây giờ mình sẽ có một tập hợp các bức
+
+7
+00:00:35,360 --> 00:00:40,180
+ảnh giống như vầy nha và bây giờ mình đưa nó vào trong cái mà cái giải thực motion learning như
+
+8
+00:00:40,180 --> 00:00:44,440
+vậy mình chỉ có biết mỗi là bức ảnh ta mình không biết là từng bức ảnh đó nó là cái loài động vật
+
+9
+00:00:44,440 --> 00:00:49,240
+nào đúng không các bạn mình không biết cụ thể nó là cá hay là mèo hay là chim tức là mình sẽ đưa
+
+10
+00:00:49,240 --> 00:00:53,360
+tập hợp rất là nhiều bức ảnh vào sau đó mình đưa vào một cái giải thực motion learning nào đó như
+
+11
+00:00:53,360 --> 00:00:56,960
+vậy trường hợp này mình chỉ có input mình không có output thì mình gọi giải thực của mình sẽ gọi
+
+12
+00:00:56,960 --> 00:01:02,720
+giải thực là unsupervised tức là học không có giám xét ha thì cái output đầu ra mình giả sử bây giờ
+
+13
+00:01:02,720 --> 00:01:09,340
+khi mình đưa vào trong đây nè thì lúc này cái output đầu ra của mình đó các bạn thì nó sẽ tự
+
+14
+00:01:09,340 --> 00:01:15,320
+động cái giải thực motion learning nó sẽ tự động làm như thế nào các bạn nó sẽ rút các ảnh mà có
+
+15
+00:01:15,320 --> 00:01:20,640
+feature giống nhau thành một nhóm nha tụi em hình dung các bạn hình dung nôm na là nó sẽ nhóm lại
+
+16
+00:01:20,640 --> 00:01:23,340
+những bức ảnh nào mà cái feature nó nó gần giống nhau nha các bạn hình dung nôm na là nó sẽ nhóm lại
+
+17
+00:01:23,340 --> 00:01:24,800
+cái feature nó các bạn hình dung n Design Nó sẽ nhóm lại những khả năng mà nó sẽ giống nhau ha trường
+
+18
+00:01:24,800 --> 00:01:31,040
+veleph này nó nhóm những bức ảnh của chú chim sinh học nhóm nè từ chú cá hình nhóm hoặc là các loài
+
+19
+00:01:31,040 --> 00:01:31,180
+các nhóm hình nhóm hoặc là các loại
+
+20
+00:01:31,180 --> 00:01:34,500
+các nhóm hình nhóm hoặc là các loài động vật cũng ví dụ vậy nha ví dụ là nó nhómingen như vậy
+
+21
+00:01:34,500 --> 00:01:34,660
+động vật cũng ví dụ vậy nha ví dụ là nó nhómingen như vậy
+
+22
+00:01:34,660 --> 00:01:37,060
+động vật cũng ví dụ vậy nha ví dụ là nó nhómingen như vậy có nghĩa là hình dung là mình chứ không
+
+23
+00:01:37,060 --> 00:01:37,360
+có hình dung là mình chứ không có
+
+24
+00:01:37,360 --> 00:01:40,520
+hình dung là mình chứ không có input và nó sẽ tự động nhóm cái το học này��
+
+25
+00:01:40,520 --> 00:01:42,080
+Các bạn quan tâm ở đây là mình cần nhóm bao nhiêu
+
+26
+00:01:42,080 --> 00:01:44,460
+Giả sử mình có một đây set đầu vào
+
+27
+00:01:44,460 --> 00:01:46,180
+Cho đó mình, giả sử mình cho
+
+28
+00:01:46,180 --> 00:01:47,720
+K bằng 3 đi, ví dụ như vậy
+
+29
+00:01:48,460 --> 00:01:50,280
+Giả sử mình cho K bằng 3 thì mình yêu cầu
+
+30
+00:01:50,940 --> 00:01:52,580
+Nó sẽ từ đây set ban đầu
+
+31
+00:01:52,580 --> 00:01:54,620
+Giúp mình phân làm 3 nhóm
+
+32
+00:01:54,620 --> 00:01:56,480
+Thì lập tức nó sẽ gom thành 3 nhóm
+
+33
+00:01:56,480 --> 00:01:58,420
+Và những cái anh nào trong một nhóm
+
+34
+00:01:58,420 --> 00:01:59,800
+Thì nó sẽ cùng một đặc tính nào đó
+
+35
+00:02:00,280 --> 00:02:02,340
+Ví dụ đơn hợp này thì các bạn thấy nó sẽ gom được cho mình
+
+36
+00:02:02,860 --> 00:02:03,840
+Những cái nhóm giống như vậy
+
+37
+00:02:03,840 --> 00:02:06,360
+Thì đương nhiên mình hiện tại thì cái giả thức này nó vẫn chưa
+
+38
+00:02:07,100 --> 00:02:08,460
+Biết cụ thể là nhóm gì
+
+39
+00:02:08,460 --> 00:02:09,900
+Nó chỉ gom, nó biết là
+
+40
+00:02:09,900 --> 00:02:11,560
+Những cái anh nào mà thuộc chung một nhóm
+
+41
+00:02:11,560 --> 00:02:13,420
+Thì nó có những đặc trưng nó giống nhau
+
+42
+00:02:13,420 --> 00:02:15,460
+Nó gần giống nhau thì nó gom chung một nhóm
+
+43
+00:02:15,920 --> 00:02:17,300
+Đó là cái ưu điểm của cái anh
+
+44
+00:02:18,080 --> 00:02:19,180
+Superbass, của cái anh giả thức
+
+45
+00:02:20,140 --> 00:02:22,120
+Không có giám sát trong trường hợp này
+
+46
+00:02:23,800 --> 00:02:24,960
+Rồi đối với trường hợp của anh
+
+47
+00:02:25,300 --> 00:02:27,400
+Học có giám sát thì mình rõ ràng mình biết là gì
+
+48
+00:02:27,400 --> 00:02:29,580
+Mình có input và mình biết được
+
+49
+00:02:29,580 --> 00:02:31,700
+Cái output đầu ra là gì luôn, nghĩa là mình có dữ liệu
+
+50
+00:02:31,700 --> 00:02:33,920
+Và mình đã có label, mình có nhãn
+
+51
+00:02:33,920 --> 00:02:35,500
+Cho dữ liệu đó rồi, thì giờ đây
+
+52
+00:02:35,500 --> 00:02:37,020
+Rõ ràng mình có dữ liệu đó các bạn
+
+53
+00:02:37,020 --> 00:02:38,580
+Đây là cái dữ liệu của mình
+
+54
+00:02:38,580 --> 00:02:40,820
+Và ở đây mình có được cái label tương ứng
+
+55
+00:02:40,820 --> 00:02:41,960
+Đúng không các bạn, thì mình nói là
+
+56
+00:02:41,960 --> 00:02:44,420
+Ở đây sẽ là hình vuông, đây là hình tam giác
+
+57
+00:02:45,740 --> 00:02:47,240
+Rõ ràng mình đã có được những cái label
+
+58
+00:02:47,540 --> 00:02:48,780
+Mình gắn nhãn ra mình xem là input
+
+59
+00:02:49,120 --> 00:02:50,120
+Và ở đây của mình là output
+
+60
+00:02:50,700 --> 00:02:53,280
+Cho đó mình đưa vào trong cái giải thực machine learning, giải thực máy học
+
+61
+00:02:53,680 --> 00:02:54,840
+Đúng không các bạn, và mình cố gắng
+
+62
+00:02:54,840 --> 00:02:56,760
+Mình tìm cái mối liên hệ giữa hai cái anh này
+
+63
+00:02:57,080 --> 00:02:58,520
+Đúng không các bạn, và sau khi mình tìm xong
+
+64
+00:02:58,520 --> 00:02:58,760
+Rồi mình
+

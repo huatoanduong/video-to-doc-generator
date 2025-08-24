@@ -1,0 +1,969 @@
+Thì bây giờ cái phần machine learning các bạn đã nắm khá rõ rồi, thì về máy học của mình mình sẽ chia làm các phần phân loại cơ bản
+Có thể là mình sẽ chia làm một cái dạng là học không có giám sát, một cái dạng là học có giám sát, tức là supervised learning
+Và một cái dạng được gọi là reinforcement learning, tức là mình học thông qua tương tác với lại những cái đối tượng môi trường bên ngoài
+Thì thực sự nếu mình phân loại chi tiết hơn một xíu nữa thì nó sẽ có một cái line trung gian nữa các bạn, tức là giữa supervised và unsupervised
+Thì nó lại sinh đồng canh nữa là semi-supervised, nhưng mà mình sẽ không đề cập cụ thể trong cái slide này
+Nhưng mà tạm thời mình có thể hình dung là nó sẽ chia làm cho mình 3 cái dạng chính này, nhưng mà mình có một dạng line giữa cái âm supervised với lại supervised
+Thì đối với trường hợp của cái anh supervised như các bạn đã biết thì trường hợp này mình sẽ là
+Học có giám sát, có nghĩa là cái dữ liệu đầu vào của mình, mình đã biết mình có input rồi, đúng không các bạn?
+Và trong trường hợp này input của mình nó kèm theo cái label, tức là nó kèm output, tức là mình đã biết trước input và mình cũng đã biết được cái output đầu ra, cái input này là gì rồi
+Và mình đang cố gắng mình tìm cái mối liên hệ nào đó, lâm na mình tìm một cái hàm F nào đó để mình có thể mapping từ input trở thành output
+Đấy thì đó là cái hướng tiếp cận của cái học có giám sát là mình đã biết trước cái input
+Và thông thường mình gọi là dữ liệu đã được label, đã được gán nhãn rồi đấy, thì mình sẽ cố gắng mình tìm cái mối liên hệ này
+Một cái thứ hai nữa là mình học không có giám sát, có nghĩa là mình có input thôi, nhưng mà mình không có output, tức là dữ liệu mình nó không có label
+Thì làm thế nào để mình có thể sử dụng các giải thật học ở supervised, tức là học không có giám sát để mình cũng có thể đưa ra được cái output trong trường hợp này
+Và cái thứ ba nữa mình đây tức là cái anh reinforcement learning
+Tức là mình sẽ học thông qua mình tương tác, thông qua những cái hàm mà mình trừng phạt, mình đánh giá, mình thưởng cho cái mô hình của mình
+Thông qua mình tương tác với môi trường, giống như hôm trước mình có chia sẻ cho các bạn cái ví dụ về cái xe tự hành
+Chẳng hạn ví dụ trong trường hợp xe tự hành hoàn toàn mình có thể ứng dụng cái này vào reinforcement learning
+Hoặc là cái trường hợp mình chơi chơi cờ đó các bạn, nghe thì rõ ràng mỗi nước đi của các bạn nhiều khi một trường hợp nào đó mà nếu mà cái
+Cái máy tính nó đưa ra dự đoán nước bút đi kế tiếp á, và nhiều khi nước đi đó nó không chính xác
+Thì lúc này nó sẽ tự động học, và lần kế tiếp nó nữa thì cái giải thực reinforcement learning nó sẽ cải tiến được improve và càng ngày nó càng tốt hơn như vậy
+Khi mà cái reinforcement learning nó chơi với các bạn càng nhiều, thì nó học thông qua cái việc learn, thông qua những cái mít thách
+Là có cái tình huống cụ thể và tình huống đó nó sẽ là, nếu nó chơi đúng thì mình sẽ tăng cái điểm, còn nếu nó chơi sai, nó đi nước sai
+Mình sẽ punish, mình trừng phạt nó, thì thông qua cái việc mình tương tác
+Cái này thì mình gọi là cái môi trường là reinforcement learning cũng khá là thú vị, khá là hay
+Cái này thì mình gọi là cái môi trường là reinforcement learning cũng khá là thú vị, khá là hay
+Và nó ứng dụng khá là nhiều trong các lĩnh vực khác nhau
+Thì tụ trụ chung lại thì mình sẽ có 3 cái anh chính này, là học có giám sát, học không có giám sát, và học thông qua tương tác với lại cái môi trường thực tế
+Bên cạnh đó thì tự nhiên mình sẽ có phần kết hợp ở đây, nhưng mà mình đang chia sẻ là kết hợp giữa semi-supervised, tức là vừa kết hợp giám sát, vừa kết hợp không giám sát
+Là tổng thể bức tranh của mình về cái machine learning
+Thì đối với trường hợp mà ở supervised learning
+Thì giống như lúc nãy mình có định nghĩa ban đầu
+Thì nôm na là mình sẽ có dữ liệu, mình có dữ liệu
+Nhưng mà dữ liệu của mình nó chưa được gắn nhãn
+Thì trường hợp này mình ví dụ là, giả sử bây giờ mình sẽ có một tập hợp các bức ảnh giống như vầy
+Và bây giờ mình đưa nó vào trong cái giải thực machine learning như vậy
+Mình chỉ có biết mỗi là bức ảnh ta
+Mình không biết là từng bức ảnh đó nó là cái loài động vật nào được không các bạn
+Mình không biết cụ thể nó là cá hay là mèo hay là chim
+Tức là mình sẽ đưa tập hợp rất là nhiều bức ảnh vào
+Sau đó mình đưa vào một cái giải thực machine learning nào đó
+Như vậy trường hợp này, mình chỉ có input, mình không có output
+Thì mình gọi giải thực của mình sẽ gọi giải thực là unsupervised
+Tức là học không có giám sát
+Thì cái output đầu ra, mình giả sử bây giờ khi mình đưa vào trong đây
+Thì lúc này cái output đầu ra của mình thì nó sẽ tự động
+Cái giải thực machine learning nó sẽ tự động làm như thế nào các bạn
+Nó sẽ rút các ảnh mà có feature giống nhau thành một nhóm
+Tụi em hình dung nôm na là
+Nó sẽ nhóm ra là một nhóm
+Nó sẽ nhóm lại những bức ảnh nào mà cái feature nó gần giống nhau
+Thì trong trường hợp này nó nhóm những bức ảnh của chú chim thành một nhóm
+Của chú cá, các cá hình nhóm hoặc là các loài động vật
+Ví dụ vậy, ví dụ là nó nhóm thành một nhóm như vậy
+Có nghĩa là hình dung là mình chỉ có mỗi input và nó sẽ tự động nhóm
+Thì trong trường hợp này, cái mình quan tâm ở đây là mình cần nhóm bao nhiêu
+Giả sử mình có một đây set đầu vào
+Cho đó mình giả sử mình cho khe bằng 3 đi
+Ví dụ như vậy
+Giả sử mình cho khe bằng 3
+Thì mình yêu cầu nó nhóm lại những bức ảnh nào
+Yêu cầu nó sẽ từ đây set ban đầu
+Giúp mình phân làm 3 nhóm
+Thì lập tức nó sẽ gom thành 3 nhóm
+Và những cái anh nào chung một nhóm
+Thì nó sẽ cùng một đặc tính nào đó
+Ví dụ trong trường hợp này thì các bạn thấy nó sẽ gom được cho mình những cái nhóm như vậy
+Thì đương nhiên mình hiện tại thì cái giả sử này nó vẫn chưa biết cụ thể là nhóm gì
+Nó chỉ gom, nó biết là những cái anh nào mà thuộc chung một nhóm
+Thì nó có những đặc trưng nó giống nhau
+Nó gần giống nhau thì nó gom chung một nhóm
+Đó là cái ưu điểm của canh Superbash
+Của canh giải thực
+Của canh giải thực
+Không có giám sát trong trường hợp này
+Rồi đối với trường hợp của anh học có giám sát
+Thì mình rõ ràng mình biết là gì các bạn
+Mình có input
+Và mình biết được cái output đầu ra là gì luôn
+Nghĩa là mình có dữ liệu và mình đã có label
+Mình có nhãn cho dữ liệu đó rồi
+Thì giờ đây mình rõ ràng mình có dữ liệu đó các bạn
+Đây là cái dữ liệu của mình
+Và ở đây mình có được cái label tương ứng
+Đúng không các bạn
+Ở đây sẽ là hình vuông
+Đây là hình tam giác
+Rõ ràng mình đã có những cái label
+Mình gắn nhãn ra mình xem là input
+Và ở đây của mình là output
+Cho đó mình đưa vào trong cái giải thực machine learning
+Giải thực máy học
+Và mình cố gắng mình tìm cái mối liên hệ giữa 2 cái hình này
+Đúng không các bạn
+Và sau khi mình tìm xong
+Từ cái input
+Mình tìm mối liên hệ từ input cho ra cái output
+Giả sử mình tìm được hàm F đi
+Cho đó mình có được hàm F này rồi
+Giả sử mình có dữ liệu mới vào
+Thì mình đơn giản mình đưa nó vào trong hàm F này
+Thì nó sẽ dự đoán cho mình cái kết quả output đầu ra
+Đấy thì năm nay mình phải có được input
+Và mình có output
+Thì lúc này cái giải thực này sẽ là giải thực học
+Có
+Giám sát ha
+Anh của mình vô trong học
+Các bạn còn nhớ là mình review một xíu
+Về canh và giải thực về linear direction
+Học vui tiếng tính
+Thì mình giả sử cái mô hình của mình nó sẽ có dạng là
+Y bằng X cộng B
+Đấy thì
+Trong đường hành mình đang cố gắng mình tìm cái
+Mối liên hệ giữa 2 cái này
+Đúng không các bạn
+Tức là mình biết X mình cũng biết Y rồi
+Mà mình đang cố gắng mình tìm 2 cái hệ số
+A và B để thể hiện cái mối liên hệ
+Giữa 2 cái
+X và Y này
+Nè
+Đó là cái
+Supervalent
+Tức là mình biết input
+Và mình cũng biết
+Luôn cái output
+Rồi
+Thì ở đây trong đường học này
+X của mình sẽ là biến phụ thuộc nha
+Y của mình sẽ là biến
+In
+Rồi
+X của mình đặt ngược lại nha
+Thì nếu mình đặt lại là X bằng
+Y cộng B
+Thì nếu mình đặt ngược lại
+Thì Y nó sẽ là independent
+Còn X nha
+Thì do cái quyết mình đặt
+Đặt cái hàm số đây thôi
+Rồi
+Thì rõ ràng
+Nếu mình theo cái cách hướng tiếp cận đó
+Thì các bạn sẽ có nhận định là gì các bạn
+Nếu mà trong đường học
+Giải thích của mình là Supervalent
+Giải thích của mình là học khó giám sát
+Thì có phải là
+Cho trước các bạn một cái dữ liệu
+Các bạn
+Có input
+Các bạn có output
+Và các bạn đang cố gắng
+Tìm một cái hàm nào đó
+Để các bạn map pin
+Các bạn tìm mối quan hệ
+Giữa hai cái input và output này
+Thì lúc này
+Có phải là các bạn giải xử
+Cái mối quan hệ này của mình
+Ở đây
+Nó sẽ là Y bằng
+AX cộng B
+Đúng không các bạn
+Thì
+Có nghĩa là
+Cho trước tập dữ liệu
+Các bạn đã ngầm định
+Các bạn ngầm định
+Mình đã giải xử
+Trong đầu của mình
+Mình suy nghĩ là gì
+Lúc này
+Là cái tập dữ liệu của mình
+Mình nên sử dụng
+Cái mô hình
+Là học
+Một cái hàm nào đó
+Hàm F của mình
+Nó có thể là
+Tiến tính
+Thì tuy nhiên tiến tính
+Thì lúc nào nó cũng sẽ có dạng
+Y bằng AX cộng B
+Mình ví dụ như vậy
+Thì
+Lúc này mình sẽ có một suy nghĩ
+Chủ quan đúng không các bạn
+Tức là mình bắt buộc
+Ứng với tập dữ liệu đó
+Thì
+Đương nhiên là gì các bạn
+Mình phải có một cái phương trình
+Tham số nào đó
+Để mình
+Cố gắng mình tìm
+Cái mối liên hệ
+Trong tập dữ liệu này
+Tức là từ input qua output
+Mình cố gắng mình tìm
+Thì bước này
+Nôm na là bước
+Các bạn dùng là
+Mình phải chủ động
+Mình làm cái bước
+Mình nhận diện cái function này
+Đúng không các bạn
+Nhưng mà thực tế
+Thực tế thật sự rất là khó
+Để mình có thể
+Mình biết chính xác
+Đúng không các bạn
+Khó mình biết chính xác
+Là cái dữ liệu của mình
+Nó sẽ là một cái hàm linear
+Hay là cái hàm non-linear
+Đúng không các bạn
+Vậy lúc này các bạn thấy là gì
+Từ tập dữ liệu ban đầu
+Các bạn phải biết là
+Dữ liệu của mình
+Nó sẽ là linear
+Hay là non-linear
+Rồi từ đó mình mới biết
+Mình apply cái giải thực nào
+Cái phương pháp nạp
+Của dữ liệu trong học này
+Mình giả sử
+Mình sử dụng cái giải thực
+Linear reaction
+Thì có phải là
+Mình có một ngầm định ban đầu của mình
+Là cái hàm F
+Mình học được các bạn
+Thì lúc nào nó cũng sẽ có định dạng
+Giống như vậy
+Hoặc là trong học này
+Mình tìm được
+Cái dữ liệu của mình
+Nó là non-linear
+Thì có thể là
+Cái phương trình mình học được
+Nó phải là
+Là dạng bậc 2
+Giống như vậy
+Có nghĩa là
+Mình cố tình
+Mình đã tham số hóa
+Cái dữ liệu
+Của mình đầu vào
+Để mình cố gắng
+Mình tìm cái hàm F đó
+Được không các bạn
+Thì trong đồ học này
+Cái hướng tiếp cận của mình
+Được gọi là hướng tiếp cận
+Parametric approach
+Tức là một hướng tiếp cận tham số
+Tức là mình đã tham số hóa
+Cái phương trình F
+Và mình cố gắng
+Mình tìm
+Mình giải cái phương trình
+Mà mình đã có ý định ban đầu
+Đó là cái ID này
+Thì cái tên gọi
+Thì các bạn thấy
+Nếu các bạn đọc một số tài liệu
+Thì họ có thể gọi
+Cái đây là một cái
+Parametric approach
+Tức là cái giải thực
+Supervised learning
+Bản thân mình dùng
+Supervised
+Có nghĩa là mình đã
+Cố tình
+Đúng như giải thực
+Mình cố tình
+Giải phương trình đó
+Và mình tìm cái hệ số A và B
+Mình có dụng vậy
+Và nhiệm vụ của mình là gì
+Khi mình tham số hóa rồi
+Thì đương nhiên
+Mình sẽ cố gắng
+Mình tìm cái
+Parameter
+Cái tham số của phương trình
+Ví dụ mình đã
+Định nghĩa rõ ràng
+Mình dạy dùng
+Như thực linearization
+Thì chắc cứu cỡ nào
+Mình sẽ cố gắng
+Mình tìm hai hệ số A và B
+Đúng không các bạn
+Để mình giải cái phương trình này
+Thông qua cái việc
+Mình huấn luyện mô hình
+Mình có input
+Có output đầu ra
+Xây dựng hàm launch
+Rồi mình sẽ
+Huấn luyện đến khi nào
+Mình đạt được
+Cái hội tù
+Để mình tìm được
+Hai hệ số A và B
+Một cái
+Tên gọi khác nữa
+Thay vì
+Mình gọi nó là
+Supervised learning
+Thì mình có thể gọi
+Đây là một cái mô hình
+Tham số
+Hướng tham số
+Tức là mình đã
+Định nghĩa trong đầu của mình
+Mình cố gắng
+Mình tìm cái hàm đó
+Nhưng mà mình chưa biết
+Cái hệ số cụ thể
+Là gì thôi
+Được không các bạn
+Rồi
+Một cái nữa
+Mình
+Một tên gọi nữa
+Mặc bạn thấy là
+Trong đồ họp này
+Nó gọi là
+Eager
+Learning approach
+Thì trong đồ họp này
+Lý do tại sao
+Mình gọi là
+Eager learning
+Thì mình có thể
+Hình dung giống như vầy
+Giả sử bây giờ
+Mình có một tập dữ liệu
+Đúng không các bạn
+Mình có một cái
+Tập dữ liệu
+Một cái
+It says
+Nó có
+10.000 cái sample đi
+Mình ví dụ như vầy
+Nó có 10.000 sample
+Ví dụ trong bài toán
+Mình phân loại hoa iris
+Đấy các bạn
+Giả sử mình có
+10.000 cái sample
+Dữ liệu mẫu của mình
+Thì lúc này
+Mình có input
+Và mình cũng có output
+Sau đó là giờ
+Mình sẽ cố gắng
+Mình sử dụng
+Giải thực supervised learning
+Để mình phân loại loại hoa
+Thì lúc này các bạn thấy là
+Có thể là
+Giải thực machine learning của mình
+Sau khi mình thiết kế giải thực xong
+Mình sẽ cố gắng
+Mình huấn luyện mô hình
+Thì có thể là
+Nó chạy
+Thời gian mình train
+Thời gian mình train
+Nó có thể là
+Mất khoảng 5 giờ
+5 giờ để mình train
+Để mình tìm được
+Cái hàm F này
+Nó như là 5 giờ
+Mình train để mình tìm được
+Hàm F này
+Đúng không các bạn
+Đấy
+Thì đó ra các bạn thấy
+Nó sẽ tốn rất nhiều thời gian
+Cho quá trình training
+Đúng không các bạn
+Và nó sẽ ít thời gian
+Cho quá trình classify
+Tại vì
+Khi mình đã tìm được
+Cái hàm F này rồi
+Thì cái lúc mà
+Cái thời gian mình test
+Mình sử dụng các bạn
+Thì lúc này
+Mình chỉ cần lấy
+Cái hàm F này ra
+Đúng không các bạn
+Mình chỉ cần lấy
+Cái hàm F này ra
+Và khi có
+Một thông tin
+Của loài hoa
+Iris mới
+Thì mình chỉ cần đưa
+Vào trong hàm F này
+Thì di động
+Nó sẽ trả về cho mình
+Kết quả là
+Một trong bao loài hoa
+Như vậy
+Cái thời gian
+Mà mình phân loại
+Dữ liệu mới
+Các bạn thấy
+Nó sẽ rất ít ít
+Như vậy trong hợp này
+Họ có một tên gọi khác
+Của anh này
+Được gọi là
+Ego Learning
+Có nghĩa là
+Đối với giải thực
+Supervised Learning
+Thì nó sẽ rất
+Nôm na
+Nó sẽ rất hăng sai
+Trong việc mình
+Huấn luyện mô hình
+Có thể các bạn
+Huấn luyện 5 tiếng
+Các bạn có thể huấn luyện
+Trong dòng 1 ngày
+Các bạn huấn luyện
+Trong dòng 1 tuần
+Các bạn không huấn luyện
+Trong 1 tháng
+Có những mô hình nó lớn
+Nếu mà
+Supervised Learning
+Thì các bạn thấy
+Nó huấn luyện
+Trong dòng cả tháng
+Mới xong
+Với vụ vậy
+Thì đây là
+Một hướng tiếp cận
+Của Ego Learning
+Có nghĩa là
+Sẽ dành rất là nhiều
+Thời gian
+Cho quá trình
+Mình training
+Và khi mình
+Có training xong rồi
+Mình tìm được
+Cái bộ tham số rồi
+Chính xác
+Mình tìm được
+Cái hàm F này rồi
+Thì cái bước
+Classify
+Là bước
+In Infer
+Bước mà các bạn test
+Các bạn sử dụng nó
+Thì nó
+Sorry em viết lại
+Cho nó chính xác đây
+Đây
+Infer
+Thì
+Nó sẽ rất là nhanh
+Như là mình dùng
+Rất ít thời gian
+Cho cái Infer
+Thì
+Đối với tiếp cận này
+Thì ta lại có một cái tên gọi nữa
+Được gọi là
+Ego Learning
+Nha
+Thì có nhiều tên gọi
+Thì mình chia sẻ với các bạn
+Thêm một cái thôi
+Một cái tên gọi nữa
+Ở đây nữa
+Của giáo thực
+Supervised Learning
+Các bạn
+Sau này các bạn đọc tài liệu
+Thì họ có thể gọi
+Cái này được gọi là
+Models
+By Learning
+Approach
+Được không các bạn
+Tức là một tên gọi khác
+Trong cái việc
+Mà mình gọi là
+Supervised
+Thì đương nhiên
+Mình biết là
+Nó sẽ dành nhiều thời gian
+Để cho train
+Và ít thời gian
+Cho cái đoạn
+Mình Enforce
+Hay là mình test
+Dữ liệu mới
+Rồi
+Đó là
+Mình review về
+Cái Supervised
+Cũng như là
+Unsupervised Approach
+Thì bây giờ
+Mình
+Đến cái mùng
+Motivation
+Của cái anh Kenent
+Thì rõ ràng
+Các bạn thấy
+Nếu mình
+Đi vào cái hướng tiếp cận
+Của mô hình học
+Có giám sát
+Thì các bạn thấy rõ ràng
+Mình
+Mình có input
+Mình có output
+Bây giờ mình cố gắng
+Mình tìm cái mối quan hệ
+Giữa input và output
+Thông qua mình tìm
+Cái hầm
+Hầm F nào đó
+Đúng không các bạn
+Giải bài toán này
+Các bạn đã cố tình
+Các bạn nói là
+Hầm F của mình bây giờ
+Nó sẽ là linear
+Thì lúc này nó sẽ là
+Y bằng
+AX cộng B
+Mình ví dụ như vậy
+Thì lúc này mình đã
+Tham số hóa
+Cái này rồi
+Nhưng mà thực sự
+Có thể là dữ liệu của mình
+Nó không phải là linear
+Nó có thể là non-linear
+Đúng không các bạn
+Nó có thể là bất kỳ
+Một mối quan hệ nào đó
+Như vậy cái việc
+Mình cố tình
+Mình nhầm định
+Mình giả sử như vậy
+Thì nó sẽ không
+Chính xác tuyệt đối
+Đúng không các bạn
+Mặc dù mình có thể giải quyết được bài toán
+Thì một cái câu hỏi đặt ra là
+Liệu có cách nào đó
+Giúp cho mình giải quyết
+Cái bài toán
+Mà mình không cần
+Phải có một cái assumption
+Không cần
+Một giả sử nào đó
+Về cái tập dữ liệu của mình
+Nó nên là linear
+Hay là nó nên là
+Non-linear
+Tức là mình không cần quan tâm
+Không cần quan tâm
+Về cái việc
+Thực sự nó là mối quan hệ gì
+Để mình
+Mình có thể giải quyết
+Bài toán
+Một hướng khác hay không
+Thì lúc này
+Cái anh Kynan
+Anh sẽ ra đời
+Được không các bạn
+Thì các bạn thấy
+Cái motivation là như vậy
+Rồi như vậy
+Cái motivation là
+Đây các bạn thấy là
+Lúc nãy các bạn nhớ giúp mình
+Cái từ ngữ là gọi là
+Ego learning
+Có nghĩa là
+Anh sẽ cố gắng
+Đối với supervibe
+Là mình có thể dành
+Rất nhiều thời gian
+Để mình train
+Đúng không các bạn
+Còn giá trình
+Info test
+Thì mình dùng
+Ít tại mình có hàm ép
+Thì mình sẽ sử dụng thôi
+Nhưng mà
+Đối với
+Cái motivation của anh Kynan
+Là
+Chỉ đặt ra một assumption
+Như vậy nè các bạn
+Có bất kỳ
+Một cái hướng tiếp cận nào
+Mà để
+Mà mình không cần
+Phải
+Đưa ra những cái giả sử
+Những cái giả thiết
+Cho dữ liệu của mình
+Nó nên là
+Nên linear
+Hay là
+Nên linear
+Tại vì khi mình
+Đã giả sử
+Nó là linear
+Hay là nên linear
+Là mình đang
+Tham số hóa
+Đúng không các bạn
+Tại mình
+Và khi mình tham số hóa rồi
+Thì cái giả thuyền supervibe
+Nó sẽ cố gắng
+Làm gì cho các bạn
+Nó tìm các tham số đó
+Cho các bạn
+Nhưng mà lúc này
+Mình bị
+Gọi là mình bị
+Gói gọn
+Trong cái suy nghĩ
+Là cái
+Dữ liệu của mình
+Nó chỉ có thể là
+Dữ liệu là
+Hàm tiến tính
+Ví dụ y bằng
+X cộng B
+Hoặc là dữ liệu của mình
+Nó là
+Phi tiến tính
+Thì có thể là cái hàm của bạn
+Y bằng
+X cộng
+BX cộng
+C chẳng hạn
+Ví dụ như vậy
+Thì lúc này các bạn đang cố gắng
+Tìm hệ số AB
+Hoặc là
+ABC
+Và như vậy
+Ứng với từng mề toán
+Các bạn gặp phải
+Thì các bạn thấy là gì
+Mình đều phải có
+Một cái giả sử
+Ngầm định giống như vậy
+Nhưng mà mình chưa chắc
+Cái giả sử của mình là đúng đúng không
+Tại vì có thể là
+Cái hàm các bạn tìm được
+Nó không
+Không có fix với lại dữ liệu
+Nó tốt
+Đúng không
+Như vậy các bạn sẽ cần
+Nhiều thời gian
+Để các bạn tìm được
+Cái hàm nó chính xác
+Nhưng các bạn sẽ tốn
+Nhiều thời gian
+Để các bạn train
+Hóa liệu mô hình
+Thì một câu hỏi đặt ra
+Là liệu mình có thể
+Cách tiếp cận nào đó
+Mà mình không cần
+Phải giả sử dữ liệu của mình
+Nó nên có mối quan hệ
+Là tiến tính
+Hoặc là phi tiến tính hay không
+Đúng không các bạn
+Và thay vì
+Mình tốn rất nhiều thời gian
+Để mình train
+Thì lúc này các bạn thấy là gì
+Có giả sử nào
+Mà mình không cần
+Dùng quá nhiều thời gian
+Để mình train
+Đúng không các bạn
+Chỉ cần có dữ liệu mới
+Mình đưa vào
+Mình xử lý luôn
+Chứ không cần
+Ví dụ là
+Không cần phải tốn một tuần
+Để train mô hình
+Rồi sau đó mới cho kết quả
+Thì
+Người ta đưa ra suy nghĩ
+Ngược lại xíu là
+Không cần phải train gì hết
+Không cần phối hiện mô hình
+Như vậy là
+Nhiệm vụ của giải thích này
+Là vì các bạn
+Nó chỉ
+Có cái data set
+Có cái tập dữ liệu
+Thì nó chỉ
+Luôn trữ tập dữ liệu thôi
+Và không có
+Cái bước train
+Đúng không các bạn
+Sẽ là không
+Không có bước training
+Đúng không các bạn
+Và khi nào
+Mà mình cần thân loại
+Hoặc là khi nào
+Mình cần dự đoán gì đó
+Thì mình cứ lôi dữ liệu ra
+Mình xử lý
+Đúng không các bạn
+Như vậy
+Và dùng trong trường hợp này
+Là vì các bạn
+Nó sẽ dành
+Ít thời gian
+Cho cái training
+Đúng không các bạn
+Nhưng mà đương nhiên
+Bù lại
+Nếu ít thời gian
+Cho quá trình train
+Thì quá trình
+Và infer
+Quá trình test của nó
+Thì nó sẽ
+Thời gian nó sẽ tăng hơn
+So với cái supervised learning
+Nhưng mà
+Người ta đưa ra
+Một cái giả sử
+Ngược lại giống như vậy
+Để mình xem coi
+Nó giải quyết
+Cái bài toán
+Cùng một bài toán như thế nào
+Đúng không các bạn
+Thì đó là cái idea
+Và cách tiếp cận này
+Thì người ta gọi là
+Một cách tiếp cận
+Lazy
+Có nghĩa là
+Thay vì mình train
+Tốn nhiều thời gian để train
+Thì bây giờ mình không cần
+Nhiều thời gian
+Để
+Để mình train
+Được không các bạn
+Nhưng mà mình vẫn có thể
+Giải quyết được bài toán
+Ban đầu
+Phần lợi hoa iris
+Mà không cần phải tốn
+5 tiếng để train
+Để tìm được cái hàm F
+Với vụ bài
+Nhưng mà mình
+Không còn nhiều
+Mà đẩy thẳng dữ liệu
+Qua cái phần mình
+Thời gian
+Mình đẩy qua thời gian
+Mình test
+Rồi bây giờ mình đi thêm
+Một cái ví dụ nữa đi
+Để cho các bạn hình dung rõ hơn
+Thì bước đầu
+Mình đang đi ở
+Một cái góc nhìn
+Nó tổng quét thôi
+Bây giờ
+Giả sử mình tham dự
+Một kỳ thi đi các bạn
+Thì có thể sẽ có
+Rất nhiều các bạn
+Sinh viên mà
+Có thể chia làm
+Vì nhóm khác nhau
+Nhưng mà tạm thời
+Giờ mình chia làm
+Hai nhóm
+Đây là một nhóm
+Các bạn rất chịu khó
+Học bài
+Và một nhóm
+Các bạn hơi lùi
+Học bài một xíu
+Và cả hai nhóm này
+Các bạn đều tham gia
+Một kỳ thi
+Thì giờ mình ví dụ
+Mình có hai bạn
+Và mỗi nhóm
+Mình có đại diện một bạn đi
+Tức là
+Cả hai bạn đều
+Tham dự một cái kỳ thi
+Thì mỗi bạn đều có
+Cái chiến thật
+Chiến lược khác nhau
+Để học bài
+Đúng không các bạn
+Một bạn học bài
+Rất là chăm chỉ
+Cố gắng nắm bắt hết
+Tất cả mọi cái kiến thức
+Ở trong sách
+Ví dụ là
+Trong bài giảng
+Của thầy cô
+Còn một bạn
+Thì rất là lùi
+Đúng không các bạn
+Nhiều khi không học được hết
+Lúc đến
+Đến kỳ thi
+Làm đâu mới tính
+Ví dụ vậy
+Thì
+Sau kỳ thi xong
+Thì có một điều
+Đặc biệt ở đây
+Cần lưu ý đây là
+Cả hai bạn đều
+Pass kỳ exam này
+Thì ở đây trường hợp này
+Mình
+Chưa nói là cái việc là
+Địa điểm cao hay điểm thấp
+Mà giả sử là
+Mình nói là
+Cả hai bạn đều
+Pass cái kỳ thi này
+Thì bây giờ
+Chuyện gì đang xảy ra
+Trong trường hợp này
+Đúng không các bạn
+Mình đang cố gắng
+Mình phân tích
+Để mình tìm cái motivation
+Cái lý do
+Tại sao họ đưa ra
+Hèn hèn thôi
+Thì
+Bạn thứ nhất
+Học bài rất là chăm chỉ
+Bạn thứ hai
+Thì có vẻ hơi
+Lùi biến
+Nhưng mà cả hai bạn này
+Đều
+Đầu kỳ thi
+Thì
+Bây giờ vấn đề như vậy
+Các bạn
+Thì cái ngữ cảnh
+Mình đặt ra là
+Trong cái kỳ thi
+Final exam này
+Thì
+Giảng viên
+Cho
+Mình là
+Mở sách
+Đúng không các bạn
+Tức là
+Mình được đem
+Mình mở tài liệu
+Được gọi là
+Open exam
+Tức là
+Mình mở tài liệu
+Để mình
+Xem
+Tài liệu trước lúc
+Mình thi
+Đúng không các bạn
+Thì
+Bạn thấy là
+Rõ ràng
+Những các bạn
+Mà học chăm chỉ bên đây
+Với bạn học
+Mà lùi học ở đây
+Thì
+Cả hai bạn
+Vừa được vô kỳ thi
+Đúng không các bạn
+Thì giờ các bạn
+Có thể đưa giúp mình
+Cái lý do
+Tại sao
+Mà các bạn bên đây
+Có thể pass được kỳ thi
+Các bạn
+Đương nhiên
+Các bạn mà học bài chăm chỉ đây
+Thì rõ ràng các bạn thấy là
+Bạn đã nhớ
+Tất cả những kiến thức
+Ở trong đầu rồi
+Thì đương nhiên
+Khi tham dự cái kỳ thi này
+Rõ ràng bạn hoàn toàn
+Cái việc mà bạn đầu kỳ thi
+Là cái việc
+Hiển nghiệt
+Đúng không các bạn
+Sát sức khá là cao
+Nhưng mà
+Theo các bạn
+Lý do tại sao
+Các bạn mà lười
+Đọc tài liệu bên đây
+Thì các bạn lại
+Có thể pass được
+Cái kỳ thi này
+Thì các bạn có thể
+Cho mình cái lý do
+Thử cách
+Đấy các bạn
+Thì như thế nào
+Tức là các bạn
+Lay lay see
+Các bạn lười lừa nha
+Còn bạn mà học chăm chỉ
+Đương nhiên mình nhớ hết rồi
+Đúng không các bạn
+Nhưng mà mình quan tâm
+Các bạn còn lại
+Đấy

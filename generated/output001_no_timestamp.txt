@@ -1,0 +1,515 @@
+Thì bây giờ cái phần machine learning các bạn đã nắm khá rõ rồi, thì về máy học của mình mình sẽ chia làm các phần phân loại cơ bản
+Có thể là mình sẽ chia làm một cái dạng là học không có giám sát, một cái dạng là học có giám sát, tức là supervised learning
+Và một cái dạng được gọi là reinforcement learning, tức là mình học thông qua tương tác với lại những cái đối tượng môi trường bên ngoài
+Thì thực sự nếu mình phân loại chi tiết hơn một xíu nữa thì nó sẽ có một cái line trung gian nữa các bạn, tức là giữa supervised và unsupervised
+Thì nó lại sinh ra một canh nữa là semi-supervised, nhưng mà mình sẽ không đề cập cụ thể trong cái slide này
+Nhưng mà tạm thời mình có thể hình dung là nó sẽ chia làm cho mình 3 cái dạng chính này, nhưng mà mình có một dạng line giữa cái ôm supervised với lại supervised
+Thì đối với trường hợp của canh supervised như các bạn đã biết thì trường hợp này mình sẽ là học
+Có giám sát có nghĩa là cái dữ liệu đầu vào của mình, mình đã biết mình có input rồi, đúng không các bạn?
+Và trong trường hợp này input của mình nó kèm theo cái label, tức là nó kèm output, tức là mình đã biết trước input và mình cũng đã biết được cái output đầu ra, cái input này là gì rồi
+Và mình đang cố gắng mình tìm cái mối liên hệ nào đó, nôm na mình tìm một cái hàm F nào đó để mình có thể mapping từ input trở thành output
+Đấy thì đó là cái hướng tiếp cận của cái học có giám sát là mình đã biết trước cái input vào
+Và thông thường mình gọi là dữ liệu đã được label, đã được gán nhãn rồi đấy, thì mình sẽ cố gắng mình tìm cái mối liên hệ này
+Một cái thứ hai nữa là mình học không có giám sát, có nghĩa là mình có input thôi, nhưng mà mình không có output, tức là dữ liệu mình nó không có label
+Thì làm thế nào để mình có thể sử dụng các giải thật học ở super 3, tức là học không có giám sát để mình cũng có thể đưa ra được cái output trong trường hợp này
+Và cái thứ ba nữa mình đây tức là cái reinforcement learning
+Mình sẽ học thông qua mình tương tác, thông qua những cái hàm mà mình trừng phạt, mình đánh giá, mình thưởng cho cái mô hình của mình
+Thông qua mình tương tác với môi trường, giống như hôm trước mình có chia sẻ cho các bạn cái ví dụ về cái xe tự hành
+Chẳng hạn ví dụ trong trường hợp xe tự hành hoàn toàn mình có thể ứng dụng cái này vào reinforcement learning
+Hoặc là cái trường hợp mình chơi chơi cờ đó các bạn, nghe thì rõ ràng mỗi nước đi của các bạn nhiều khi một trường hợp nào đó mà nếu mà cái
+Cái máy tính nó đưa ra dự đoán nước bút đi kế tiếp và nhiều khi nước bút đi đó nó không chính xác
+Thì nước này nó sẽ tự động học và lần kế tiếp nó nữa thì cái giải thức reinforcement learning nó sẽ cải tiến được improve và càng ngày nó càng tốt hơn như vậy
+Khi mà cái reinforcement learning nó chơi với các bạn càng nhiều thì nó học thông qua cái việc learn, thông qua những cái myth-tech
+Là có cái tình huống cụ thể và tình huống đó nó sẽ là nếu nó chơi đúng thì mình sẽ tăng cái điểm
+Còn nếu nó chơi sai, nó đi nước sai mình sẽ punish, mình trừng phạt nó thì thông qua cái việc mình tương tác
+Cái này thì mình gọi là cái môi trường là reinforcement learning cũng khá là thú vị, khá là hay
+Và nó ứng dụng khá là nhiều trong các lĩnh vực khác nhau
+Thì tụ trụ chung lại thì mình sẽ có 3 cái anh chính này là học có giám sát, học không có giám sát và học thông qua tương tác với lại cái môi trường thực tế
+Thì bên cạnh đó thì tự nhiên mình sẽ có phần kết hợp ở đây
+Nên mình đang chia sẻ là kết hợp giữa semi-supervised, có nghĩa là vừa kết hợp giám sát vừa kết hợp không giám sát
+Là tổng thể bức tranh của mình về cái machine learning
+Thì đối với trường hợp mà ở supervised learning
+Thì giống như lúc nãy mình có định nghĩa ban đầu
+Thì nôm na là mình sẽ có dữ liệu, mình có dữ liệu
+Nhưng mà dữ liệu của mình nó chưa được gắn nhãn
+Thì trường hợp này mình ví dụ là giả sử bây giờ mình sẽ có một tập hợp các bức ảnh giống như vầy
+Và bây giờ mình đưa nó vào trong cái giải thực machine learning như vậy
+Mình chỉ có biết mỗi là bức ảnh thôi
+Mình không biết là từng bức ảnh đó nó là cái loài động vật nào đúng không các bạn
+Mình không biết cụ thể nó là cá hay là mèo hay là chim
+Tức là mình sẽ đưa tập hợp rất là nhiều bức ảnh vào
+Sau đó mình đưa vào một cái giải thực machine learning nào đó
+Như vậy trường hợp này mình chỉ có input, mình không có output
+Thì mình gọi giải thực của mình sẽ gọi giải thực là unsupervised
+Tức là học không có giám xét
+Thì cái output đầu ra, mình giả sử bây giờ mình đưa vào trong đây nè
+Thì lúc này cái output đầu ra của mình thì nó sẽ tự động
+Cái giải thực machine learning nó sẽ tự động làm như thế nào các bạn
+Nó sẽ rút các ảnh mà có feature giống nhau thành một nhóm
+Các bạn hình dung nôm na là
+Nó sẽ nhóm làm như thế này
+Nó sẽ rút lại những bức ảnh nào mà cái feature nó gần giống nha
+Thì trong trường hợp này nó nhóm những bức ảnh của chú chim thành một nhóm nè
+Của chú cá, các cá thành nhóm hoặc là các loài động vật
+Ví dụ như vậy nha
+Thí dụ là nó nhóm thành một nhóm như vậy
+Có nghĩa là hình dung là mình chỉ có mỗi input và nó sẽ tự động nhóm
+Thì trong trường hợp này các bạn quan tâm ở đây là mình cần nhóm bao nhiêu
+Giả sử mình có một đây set đầu vào
+Sau đó giả sử mình cho khay bằng 3 đi
+Ví dụ như vậy
+Giả sử mình cho khay bằng 3
+Thì mình yêu cầu nó gì
+Yêu cầu nó sẽ từ đây set ban đầu giúp mình phân làm 3 nhóm
+Thì lập tức nó sẽ nhóm thành 3 nhóm
+Và những cái anh nào chung một nhóm thì nó sẽ cùng một đặc tính nào đó
+Ví dụ trong trường hợp này thì các bạn thấy nó sẽ nhóm được cho mình những cái nhóm như vậy
+Thì đương nhiên mình hiện tại thì cái giả sử này nó vẫn chưa biết cụ thể là nhóm gì nha các bạn
+Nó chỉ nhóm
+Nếu biết là những cái anh nào mà thuộc chung một nhóm
+Thì nó có những đặc trưng đó nó giống nha
+Nó gần giống nhau thì nó nhóm chung một nhóm
+Đó là cái ưu điểm của kênh unsupervised của kênh giả sử
+Không có giám sát trong trường hợp này
+Rồi đối với trường hợp của anh học có giám sát
+Thì mình rõ ràng mình biết là gì các bạn
+Mình có input
+Và mình biết được cái output đầu ra là gì luôn
+Nghĩa là mình có dữ liệu và mình đã có label
+Mình có nhãn cho dữ liệu đó rồi
+Thì giờ đây mình rõ ràng mình có dữ liệu đó các bạn
+Đây là cái dữ liệu của mình
+Và ở đây mình có được cái label tương ứng
+Đúng không các bạn
+Thì mình nói là ở đây sẽ là hình vuông đây là hình tam giác
+Đúng không các bạn
+Rõ ràng mình đã có những cái label
+Mình gắn nhãn ra mình xem lại
+Đây là input
+Ở đây của mình là output
+Cho đó mình đưa vào trong cái giải thực machine learning
+Giải thực máy học
+Đúng không các bạn
+Và mình cố gắng mình tìm cái mối liên hệ giữa hai cái này
+Đúng không các bạn
+Và sau khi mình tìm xong
+Thì mình từ cái input
+Mình tìm mối quan hệ của
+Từ input cho ra cái output
+Giả sử mình tìm được hàm F đi
+Sau đó mình có được hàm F này rồi
+Thì giờ giả sử mình có dữ liệu mới vào
+Thì mình đơn giản mình đưa nó vào trong hàm F này
+Thì nó sẽ dự đoán cho mình cái kết quả output đầu ra
+Đấy thì năm nay mình phải có được input
+Và mình có output
+Thì lúc này cái giải thực này sẽ là giải thực học
+Có giám sát ha
+Đó là cái anh của mình vô trong học
+Các bạn còn nhớ là mình review một xíu về canh
+Và giải thực về linear direction đó các bạn
+Họ vui tiếng tính á
+Thì mình giả sử cái mô hình của mình
+Nó sẽ có dạng là y bằng x cộng b
+Đúng không các bạn
+Đấy thì
+Trong đường hành mình đang cố gắng mình tìm cái
+Mối liên hệ giữa hai cái này
+Đúng không các bạn
+Tức là mình biết x mình cũng biết y rồi
+Mà mình đang cố gắng mình tìm hai cái hệ số
+A và B
+Để thể hiện cái mối liên hệ
+Giữa hai cái biến x và y này
+Nè
+Đó là cái supervalent in
+Tức là mình biết input
+Và mình cũng biết luôn cái output ha
+Rồi thì ở trong trường hợp này
+X của mình sẽ là biến phụ thuộc nha
+Y của mình sẽ là biến independent
+Rồi sau đây mình đặt ngược lại nha
+Thì nếu mình đặt lại là x bằng y cộng b
+Thì nếu mình đặt ngược lại
+Thì y nó sẽ là independent
+Còn x nha
+Thì do cái week mình đặt cái hàm số đây thôi nha
+Rồi thì rõ ràng
+Nếu mình theo cái cách hướng tiếp cận đó
+Thì các bạn sẽ có nhận định là gì các bạn
+Nếu mà trong trường hợp giả thự của mình là supervalent
+Giả thự của mình là học khối giám sát
+Thì có phải là
+Cho trước các bạn một cái dữ liệu
+Các bạn có input
+Các bạn có output
+Và các bạn đang cố gắng tìm một cái hàm nào đó
+Để các bạn map pin
+Các bạn tìm mối quan hệ giữa hai cái input và output này
+Thì lúc này có phải là các bạn giải xử
+Cái mối quan hệ này của mình ở đây
+Nó sẽ là y bằng ax cộng b
+Đúng không các bạn
+Thì có nghĩa là
+Cho trước tập dữ liệu
+Các bạn đã ngầm định
+Các bạn ngầm định
+Mình đã giả sử trong đầu của mình đó các bạn
+Mình suy nghĩ là gì các bạn
+Lúc này là cái tập dữ liệu của mình
+Mình nên sử dụng cái mô hình là học một cái hàm nào đó
+Hàm F của mình nó có thể là tuyến tính
+Thì tuyến tính thì lúc nào nó cũng sẽ có dạng y bằng ax cộng b mình ví dụ như vậy
+Thì lúc này mình sẽ có một suy nghĩ chủ quan đúng không các bạn
+Tức là mình bắt buộc là ứng với tập dữ liệu đó
+Thì đương nhiên là gì các bạn
+Mình phải có một cái phương trình tham số nào đó
+Để mình cố gắng mình tìm cái mối liên hệ trong tập dữ liệu này
+Tức là từ input qua output đó
+Mình cố gắng mình tìm
+Thì bước này nôm na là bước các bạn dùng là mình phải chủ động
+Mình làm cái bước mình nhận diện cái function này đúng không các bạn
+Nhưng mà thực tế các bạn thực tế thực sự rất là khó
+Để mình có thể mình biết chính xác đúng không các bạn
+Thì khó mình biết chính xác là cái dữ liệu của mình nó sẽ là một cái hàm linear
+Hay là cái hàm non-linear đúng không các bạn
+Như vậy lúc này các bạn thấy là gì
+Từ tập dữ liệu ban đầu các bạn phải biết là
+Dữ liệu của mình nó sẽ là linear hay là non-linear
+Rồi từ đó mình mới biết mình apply cái giải thực nào
+Cái phương pháp nào của dữ liệu trong học này
+Mình giả sử mình sử dụng cái giải thực linear regression
+Thì có phải là mình có một ngầm định ban đầu của mình
+Là cái hàm F mà mình học được các bạn
+Thì lúc nào nó cũng sẽ có định dạng giống như vậy
+Hoặc là trong học này mình tìm được
+À cái dữ liệu của mình nó là non-linear
+Thì có thể là cái phương trình mình học được
+Nó phải là dạng bậc 2 giống như vậy
+Có nghĩa là mình cố tình mình đã tham số hóa cái dữ liệu
+Của mình đầu vào để mình cố gắng mình tìm cái hàm F đó
+Thì trong đồ học này cái hướng tiếp cận của mình
+Được gọi là hướng tiếp cận parametric approach
+Tức là hướng tiếp cận tham số
+Tức là mình đã tham số hóa cái phương trình F
+Và mình cố gắng mình tìm mình giải cái phương trình
+Mà mình đã có ý định ban đầu thôi các bạn
+Đó là cái ID này
+Thì cái tên gọi các bạn thấy trên này các bạn đọc một số tài liệu
+Thì họ có thể gọi cái đây là một cái parametric approach
+Tức là cái giải thực của supervised learning
+Bản thân mình dùng supervised có nghĩa là mình đã cố tình
+Đúng như giải thực linear regression
+Mình cố tình mình giải
+Phương trình đó và mình tìm cái hệ số A và B
+Mình ví dụ vậy ha
+Đấy và nhiệm vụ của mình là gì
+Khi mình tham số hóa rồi
+Thì đương nhiên mình sẽ cố gắng mình tìm cái parameter
+Cái tham số của phương trình
+Ví dụ mình đã định nghĩa rõ ràng
+Mình giải dụng giải thực linear regression
+Thì chắc cứu cỡ nào mình sẽ cố gắng mình tìm 2 hệ số A và B
+Đúng không các bạn
+Để mình giải cái phương trình này
+Thông qua cái việc mình huấn luyện mô hình
+Mình có input có output đầu ra
+Xây dựng hàm loss
+Rồi mình sẽ huấn luyện đến khi nào
+Mình đạt được cái hội tù
+Để mình tìm được 2 hệ số A và B
+Một cái tên gọi khác nữa
+Thay vì mình gọi nó là supervised learning
+Thì mình có thể gọi đây là một cái mô hình tham số
+Hướng tham số tức là mình đã định nghĩa trong đầu của mình
+Mình cố gắng mình tìm cái hàm đó
+Nhưng mà mình chưa biết cái hệ số cụ thể đó là gì thôi
+Được không các bạn
+Rồi một cái nữa
+Một tên gọi nữa mà các bạn thấy là trong đồ họp này
+Nó gọi là một cái là eager learning approach
+Thì trong đồ họp này lý do tại sao
+Nó gọi là eager learning
+Thì mình có thể hình dung giống như vầy
+Giả sử bây giờ mình có một tập dữ liệu
+Đúng không các bạn
+Mình có một cái tập dữ liệu
+Nó có 10.000 cái sample đi
+Mình ví dụ như vậy
+Nó có 10.000 sample
+Ví dụ trong bài toán mình phân loại hoa iris
+Giả sử mình có 10.000 cái sample dữ liệu mẫu của mình
+Thì lúc này
+Mình có input và mình cũng có output luôn
+Sau đó là giờ mình sẽ cố gắng
+Mình sử dụng cái giải thưởng supervised learning nào đó
+Để mình phân loại loại hoa
+Giải thưởng supervised learning của mình
+Sau khi mình thiết kế giải thưởng xong
+Mình sẽ cố gắng mình huấn luyện mô hình
+Thì có thể là nó chạy
+Thời gian mình train nó có thể là mất khoảng 5 giờ
+5 giờ để mình train
+Để mình tìm được cái hàm F này
+5 giờ mình train để mình tìm được hàm F này
+Đúng không các bạn
+Thì đó ra các bạn thấy nó sẽ tốn rất nhiều thời gian cho quá trình training
+Đúng không các bạn
+Và nó sẽ ít thời gian cho quá trình classifying
+Tại vì khi mình đã tìm được cái hàm F này rồi
+Thì cái lúc mà cái thời gian mình test mình sử dụng
+Thì lúc này mình chỉ cần lấy cái hàm F này ra
+Mình chỉ cần lấy cái hàm F này ra
+Và khi có một thông tin của loại hoa
+Iris mới thì mình chỉ cần đưa vào trong hàm F này
+Thì di động nó sẽ trả về cho mình
+Kết quả là 1 trong 3 loại hoa
+Như vậy cái thời gian mà mình phân loại dữ liệu mới
+Các bạn thấy nó sẽ rất ít ít
+Như vậy trong hộp này có một tên gọi khác của anh này
+Được gọi là Ego Learning
+Có nghĩa là đối với giải thưởng supervised learning
+Thì nó sẽ rất
+Hăng size trong việc mình huấn luyện mô hình
+Có thể các bạn huấn luyện 5 tiếng
+Các bạn có thể huấn luyện trong vòng 1 ngày
+Các bạn có thể huấn luyện trong vòng 1 tuần
+Các bạn có thể huấn luyện trong vòng 1 tháng
+Có những mô hình nó lớn
+Các bạn thấy nó huấn luyện trong vòng cả tháng mới xong
+Thì đây là một khối tiếp cận của Ego Learning
+Có nghĩa là sẽ dành rất nhiều thời gian
+Cho quá trình mình training
+Và khi mình có training xong rồi
+Mình tìm được cái bộ tham số rồi
+Chính xác mình tìm được cái hàm F này rồi
+Thì cái bước classified
+Là bước infer
+Bước mà các bạn test các bạn sử dụng nó
+Thì nó
+Infer
+Thì nó sẽ rất là nhanh
+Như là mình dùng ít thời gian cho cái infer
+Thì đối với tiếp cận này thì chúng ta lại có một cái tên gọi nữa
+Được gọi là Ego Learning
+Nó có nhiều tên gọi cho nên mình chia sẻ với các bạn thêm một cái thôi
+Một cái tên gọi ở đây nữa
+Của giáo thức supervised learning
+Sau này các bạn đọc tài liệu
+Thì họ có thể gọi cái này được gọi là
+Models by Learning Approach
+Tức là một cái tên gọi khác
+Trong cái việc mà mình gọi là supervised
+Tuy đương nhiên mình biết là nó sẽ dành nhiều thời gian
+Để cho train và
+Ít thời gian cho cái giai đoạn mình
+Inforced hay là mình test dữ liệu mới
+Rồi đó là
+Mình review về cái supervised cũng như là
+Unsupervised Approach
+Thì bây giờ mình
+Đến cái mông Motivation
+Của cái anh Kenneth
+Thì rõ ràng các bạn thấy nếu mình
+Đi vào cái hướng tiếp cận của mô hình học có giám sát
+Thì các bạn thấy rõ ràng mình
+Mình có input mình có output
+Bây giờ mình cố gắng mình tìm cái mối quan hệ giữa input và output
+Thông qua mình tìm cái hầm
+Hầm F nào đó đúng không các bạn
+Thì lúc này nè
+Khi mà các bạn giải bài toán này các bạn đã cố tình
+Các bạn nói là hầm F của mình bây giờ nó sẽ là linear
+Thì lúc này nó sẽ là y bằng ax cộng b mình ví dụ như vậy
+Thì lúc này mình đã tham số hóa
+Cái này rồi
+Nhưng mà thực sự có thể là dữ liệu của mình nó không phải là linear
+Nó có thể là non-linear đúng không các bạn
+Nó có thể là bất kỳ một mối quan hệ nào đó
+Như vậy cái việc mà mình cố tình mình
+Nhầm định mình giả sử như vậy thì nó sẽ không
+Chính xác tuyệt đối đúng không các bạn
+Mặc dù mình có thể giải quyết được bài toán
+Thật ra là liệu có cách nào đó
+Giúp cho mình giải quyết một cái bài toán
+Mà mình không cần phải có một cái assumption
+Không cần một giả sử nào đó
+Về cái tạp dữ liệu của mình
+Nó nên là linear hay là nó nên là non-linear
+Tức là mình không cần quan tâm
+Không cần quan tâm vào cái việc thực sự nó là mối quan hệ gì
+Để mình
+Mình có thể giải quyết bài toán theo một hướng khác hay không
+Thì lúc này
+Cái anh Kynan sẽ ra đời được không các bạn
+Thì các bạn thấy cái motivation là như vậy
+Rồi như vậy
+Cái motivation ở đây các bạn thấy là
+Lúc nãy các bạn nhớ giúp mình cái từ ngữ là gọi là
+Ego learning có nghĩa là
+Anh sẽ cố gắng đối với supervisor là mình có thể dành
+Rất nhiều thời gian để mình train đúng không các bạn
+Còn trên Inforotest thì mình dùng ít
+Tại mình có ham ép rồi thì mình sẽ sử dụng thôi
+Nhưng mà đối với
+Cái motivation của anh Kynan là
+Chỉ đặt ra assumption như vậy nè các bạn
+Có bất kỳ một cái hướng tiếp cận nào
+Mà để mà mình không cần phải
+Đưa ra những cái giả sử
+Những cái giả thiết cho dữ liệu của mình
+Nó nên là non-linear hay là nó nên là linear
+Tại vì khi mình
+Đã giả sử nó là linear hay là non-linear
+Là mình đang tham số hóa đúng không các bạn
+Tại mình và khi mình tham số hóa rồi
+Thì cái giả thực supervisor nó sẽ cố gắng làm gì
+Nó tìm các tham số đó cho các bạn
+Nhưng mà lúc này mình bị
+Gọi là mình bị
+Gói gọn
+Trong cái suy nghĩ là cái dữ liệu của mình
+Nó chỉ có thể là dữ liệu là
+Hàm tiến tính ví dụ y bằng x cộng b
+Hoặc là dữ liệu của mình nó là
+Phi tiến tính thì có thể là cái hàm của bạn
+Y bằng a x cộng b x cộng c
+Ví dụ như vậy thì lúc này các bạn
+Các bạn đang cố gắng tìm hệ số a b hoặc là
+A b c và như vậy
+Ứng với từng mề toán các bạn gặp phải thì các bạn thấy là gì
+Mình đều phải có một cái giả sử ngầm định
+Giống như vậy nhưng mà mình chưa chắc
+Cái giả sử của mình là đúng đúng không các bạn
+Tại vì có thể là cái hàm các bạn tìm được nó
+Nó không có fit với lại dữ liệu nó tốt đúng không
+Như vậy các bạn sẽ cần nhiều thời gian
+Để các bạn tìm được cái hàm nó chính xác
+Nhưng các bạn sẽ tốn nhiều thời gian để các bạn train huấn luyện mô hình
+Thì một câu hỏi đặt ra
+Là liệu mình có thể cách tiếp cận nào đó mà mình không cần phải giả sử dữ liệu của mình
+Nó nên có mối quan hệ là
+Tiến tính hay là phi tiến tính hay không
+Đúng không các bạn
+Và thay vì mình tốn rất nhiều thời gian để mình train á
+Thì lúc này các bạn thấy là gì
+Có giá thực nào mà mình không cần dùng quá nhiều thời gian để mình train
+Đúng không các bạn
+Chỉ cần có dữ liệu mới mình đưa vào mình xử lý luôn
+Chứ không cần ví dụ là
+Không cần phải tốn một tuần để train mô hình
+Rồi sau đó mới cho kết quả
+Người ta đưa ra suy nghĩ ngược lại xíu là
+Không cần phải train gì hết
+Không cần huấn luyện mô hình
+Nó chỉ có cái data set
+Có cái tập dữ liệu
+Thì nó chỉ lưu trữ tập dữ liệu thôi
+Và không có cái bước train
+Đúng không các bạn
+Sẽ là không có bước training
+Và khi nào mà mình cần thân loại
+Hoặc là khi nào mình cần dự đoán gì đó
+Thì mình cứ lôi dữ liệu ra mình xử lý
+Đúng không các bạn như vậy
+Và trong trường hợp này là vậy các bạn
+Nó sẽ dành ít thời gian cho cái training
+Đúng không các bạn
+Nhưng mà đương nhiên bù lại
+Nếu ít thời gian cho quá trình train
+Nó sẽ tăng hơn so với cái supervised learning
+Nhưng mà người ta đưa ra một cái giả sử
+Ngược lại giống như vậy để mình xem coi
+Nó giải quyết cái cùng một bài toán như thế nào
+Đúng không các bạn
+Thì đó là cái idea
+Và cách tiếp cận này thì người ta gọi là
+Một cách tiếp cận lazy
+Có nghĩa là thay vì mình train
+Tốn nhiều thời gian để train
+Thì bây giờ mình không cần nhiều thời gian để mình train
+Được không các bạn
+Nhưng mà mình vẫn có thể giải quyết được bài toán ban đầu
+Phần lợi hoa iris mà không cần phải tốn 5 tiếng để train
+Để tìm được cái hàm F ví dụ vậy
+Không cần nhiều
+Mà đẩy thẳng dữ liệu qua cái phần mình
+Thời gian mình đẩy qua thời gian mình test
+Rồi bây giờ mình đi thêm một cái ví dụ nữa đi
+Để cho các bạn hình dung rõ hơn
+Bước đầu mình đang đi ở môn motivation
+Một cái góc nhìn nó tổng quét thôi
+Bây giờ
+Giả sử mình tham dự một kỳ thi
+Thì có thể sẽ có rất nhiều các bạn sinh viên
+Mà
+Có thể chia làm nhiều nhóm khác nhau
+Nhưng mà tạm thời mình chia làm hai nhóm
+Đây là một nhóm các bạn rất chịu khó học bài
+Và một nhóm các bạn hơi lười học bài một số
+Và cả hai nhóm này các bạn
+Đều tham gia một kỳ thi
+Ví dụ mình có hai bạn
+Mỗi nhóm mình có đại diện một bạn đi
+Tức là cả hai bạn đều tham dự một cái kỳ thi
+Thì mỗi bạn đều có cái chiến lược khác nhau
+Để học bài đúng không các bạn
+Một bạn học bài rất là chăm chỉ
+Cố gắng nắm bắt hết tất cả mọi cái kiến thức
+Ở trong sách ví dụ là trong bài giảng của thầy cô
+Còn một bạn thì rất là lười
+Đúng không các bạn
+Nhiều khi không học được hết
+Lúc đến kỳ thi là đâu mới tính ra
+Ví dụ vậy
+Thì sau kỳ thi xong
+Thì có một điều
+Đặc biệt ở đây cần lưu ý đây là
+Cả hai bạn đều pass kỳ exam này
+Thì ở đây trường hợp này mình chưa nói là
+Cái việc là địa điểm cao hay địa điểm thấp mà
+Giả sử mình nói là cả hai bạn đều pass
+Cái kỳ thi này
+Thì bây giờ chuyện gì đang xảy ra trong trường hợp này đúng không các bạn
+Mình đang cố gắng mình phân tích để mình tìm cái motivation
+Cái lý do tại sao họ đưa ra khenhen thôi
+Thì bạn thứ nhất học bài rất là chăm chỉ
+Bạn thứ hai thì có vẻ hơi lười biến
+Nhưng mà cả hai bạn này
+Đều đậu kỳ thi
+Thì bây giờ vấn đề như vậy các bạn
+Thì cái ngữ cảnh mình đặt ra là
+Trong cái kỳ thi final exam này
+Thì giảng viên cho mình là
+Mở sách đúng không các bạn
+Tức là mình
+Mở tài liệu
+Được gọi là open exam
+Tức là mình mở tài liệu
+Để mình xem tài liệu
+Trước lúc mình thi đó đúng không các bạn
+Thì
+Các bạn thấy là rõ ràng những bạn mà
+Học chăm chỉ bên đây với bạn mà lùi học ở đây
+Cả hai bạn vừa được vô kỳ thi
+Đúng không các bạn
+Thì giờ các bạn có thể đưa giúp mình một cái lý do
+Tại sao mà các bạn bên đây có thể pass được kỳ thi các bạn
+Đương nhiên các bạn mà học bài chăm chỉ đây
+Thì rõ ràng các bạn thấy là
+Bạn đã nhớ tất cả những kiến thức ở trong đầu rồi
+Thì đương nhiên khi tham dự cái kỳ thi này
+Rõ ràng bạn hoàn toàn
+Cái việc mà bạn đậu kỳ thi là cái việc hiển nhiệt đúng không các bạn
+Sát sức khá là cao
+Nhưng mà theo các bạn lý do tại sao các bạn mà lùi
+Đọc tài liệu bên đây nè các bạn
+Thì các bạn lại có thể
+Pass được cái kỳ thi này
+Thì các bạn có thể cho mình cái lý do thử
+Thì các bạn sẽ như thế nào ha
+Tức là các bạn lay lay si
+Các bạn lùi lùi nha
+Còn các bạn mà học chăm chỉ đương nhiên mình nhớ hết rồi đúng không các bạn
+Nhưng mà mình quan tâm vào các bạn còn lại nè
+Đấy
