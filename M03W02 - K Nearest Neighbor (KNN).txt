@@ -1,0 +1,1862 @@
+
+Tổng số Sample
+Tổng số Sample
+Regression
+Regression
+KNeighbor Classifier
+Predit
+Precision Record
+Accuracy Score
+Over 15
+Outlier
+Fit
+Fit
+Distance
+Predit
+Trend
+Trend
+Lazy Training
+Lazy Training
+Lazy Training
+Trending
+Iris
+Thu tín
+Iris
+Thu tín
+Iris
+11
+11
+và cái output đầu ra mình phân lộ cái customer của mình
+nó sẽ là thuộc cái dạng service gì, là basic service, e-service, blood service hay là total service
+ký như là, được hay nên mình phân lộ 4 phân lộ, 4 phân lộ thay vì 3 như là cái iris nha
+thì output đầu vào của mình sẽ có 11 thủ tính, và output đầu ra của mình sẽ có 4 phân lộ
+1234 tương ứng với này, thì các bạn có thể đọc cái file customer data này lên nha
+mình có chia sẻ các bạn ở trong link google ride đó
+thì bây giờ để mình qua cái code đi nha, để mình chia sẻ cho nó dễ
+thì lấy đây lúc nãy cái code mình đọc cái iris nha, thì mình tương tự như các bạn thấy á
+thì thay vì mình dùng cái mình tự mình code á, thì các bạn có thể dùng thư viện nha
+lúc nãy là mình đọc từ cái file CSV, thì bây giờ các bạn có thể đọc từ cái file iris data này
+các bạn có thể dùng cái pandas để các bạn đọc, các bạn trở về cái data frame ở đây nha
+rồi sau đó các bạn sẽ tách ra cho mình cái input là gì, cái output là gì
+thì cái này các bạn cũng khá là bằng thuộc với việc mình sử dụng cái data frame rồi đúng không các bạn
+mình lấy dữ liệu của x, mình lấy dữ liệu của y, thì đây là tương ứng là x thì mình sẽ lấy tất cả các cọp đúng không các bạn
+mình trừ cho cái cọp cuối cùng, như vậy cái x của mình mình sẽ lấy tất cả các dòng
+đầu tiên là tất cả các dòng, sau đó là cũng tất cả các cọp, nhưng mà trừ cọp cuối cùng
+cọp cuối cùng là cái cọp về cái class này các bạn, là về cái label á, nên mình ít mình lấy
+mình chỉ là mình bỏ cọp cuối đó thôi, còn cái output của mình đương nhiên mình sẽ lấy cái cọp cuối của mình
+tại vì tổng cộng mình sẽ lấy tương ứng của mình là 0123, mình gương tượng cái 4 không các bạn là gương tượng mình sẽ lấy cái y của mình là cái này
+0123, còn cái 4 sẽ là cái label tương ứng mình ở đây, mình sẽ tắt ra, mình tắt xy của mình, input là gì, output là gì
+sau đó mình dùng cái hàm trend test list để mình phân lội ra bao nhiêu cái tập để mình đưa vào mô hình
+để mình xem là đây test set, còn bao nhiêu tập để mình xem là test set thôi, thì mình tắt nó ra
+thì các bạn sẽ có thể sử dụng cái hàm trend test list để nó random ngộn duyên nó lấy cho các bạn thôi, như vậy nó sẽ lấy 20%
+dành cho tập test là tập để mình giữ đón, và 80% còn lại dành cho tập data góc mà các bạn đã biết dữ liệu rồi các bạn tính cái distance dựa trên tập data đó
+rồi ở đây thì mình có thêm 1 cái nữa là thay vì lúc nãy là mình chưa có normalization mình trưởng hóa
+các bạn thấy giải sự dữ liệu của mình ở đây nè, thì nếu mình chưa trưởng hóa thì có thể là mình vẫn có thể thực hiện được
+đúng không các bạn, nhưng mình có thể cái độ chính xác của mình nó không có cao thôi, thì mình sẽ trưởng hóa
+mình có thể sử dụng cái thư viện là standard scalar để mình trưởng hóa, để mình normalization
+từ giờ các bạn sẽ mong muốn mình normalization nó về trong cái khoảng từ 0 đến 1, hoặc là trừ 1 đến 1, thì các bạn có thể sử dụng cái standard scalar này để nó normalization
+và nhớ là mình chỉ normalization trên cái dữ liệu x, tên là cái input thôi các bạn, tên là mình đừng có normalization cho cái output nha
+về nhà có một số bạn nhiều khi sau này các bạn làm các bạn normalization mà bô tình các bạn normalization cho cái output
+không cần thiết tại vì mình chỉ cần normalization cho từng thuộc tính output, từng thuộc tính ở phía input thôi
+còn output là dữ liệu đầu ra mình đâu cần normalization làm gì đúng không các bạn, nên lúc mà normalization các bạn nhớ giúp mình ha
+là mình chỉ normalization, mình trưởng hóa dữ liệu của mình trong cái x, trong cái input thôi
+Rồi, thì đương nhiên mình sẽ trưởng hóa cho tập trend và mình trưởng hóa cho tập track, mình đặt tên is trend không phải là mình dùng để trend nha các bạn
+là cái bộ dữ liệu mình dùng để mình tính distance đến cái new sample đó nha
+Rồi, cho đó các bạn sẽ dùng cái thư viện thôi, thay vì mình tự mình viết thì các bạn dùng cái thư viện k neighbor classifier
+các bạn chuyền cái này vào, các bạn chuyền cái neighbor bằng 5, có nghĩa là lúc này nó sẽ tự động chạy cho các bạn
+và nó sẽ xác định cho các bạn ha
+thì chúng tôi sẽ theo luận coi cái chỗ fix này nó sẽ làm gì ha
+sau đó lúc mà predict, lúc này mình mới có cái sample mới đưa vào đúng không các bạn
+thì lúc đó các bạn thấy là cái gì, nó sẽ tính cái distance từ sample mới này đến tất cả những cái trend này
+sau đó các bạn tìm ra k anh, của mình là n, mình là bằng 5, thế là k bằng 5, nó tìm ra 5 anh gần nhất
+rồi các bạn gọi predict nè, các bạn gọi classifier, các bạn gọi predict, chuyển vào is step
+ở đây thì các bạn dùng mình chỉ có 20% dành cho test nên đây mình trả về, mình đã so sánh cho các bạn xem
+đây là kết quả dự đón của khenen, kết quả thực tế mình mong đợi, mình so sánh xem coi nó có giống nhau hay không
+nếu giống nhau thì nó trả bị true, còn không giống nhau thì nó trả bị false
+trong trường hợp này các bạn thấy là nó khác nhau với khác nhau, mình trả bị true, như là trường hợp này nó bị lỗi
+còn nếu trường hợp nó giống nhau thì mình chỉ có 1 trường hợp bị lỗi nhất là chỗ này
+chỗ này là để mình so sánh cho các bạn 2 cái anh tư ứng chỗ này
+mình thay đổi cái test size khác nhau, tại vì trường hợp này nếu mình thay đổi cái test size khác nhau thì nó sẽ khác nhau về cái độ chính xác đó bằng mỹ
+tại vì nếu mình thay đổi ở đây là 0.4 đi, lúc này mình chỉ có 60% ở cái bộ dữ liệu data set mình cho trước
+thì khi có 1 new symbol mới vào, thì thay vì mình phải tính trên 80% dữ liệu mình có, bây giờ mình chỉ tính trên 60%
+lúc này khi các bạn chọn được cái neighbor các bạn tính tón thì nó sẽ khác, nên cái việc thay đổi test size này nó cũng ảnh hưởng đến cái độ chính xác của cái mô hình của mình
+thay vì có 1 symbol mới đưa vào mình phải tính cái distance đến 80% dữ liệu, bây giờ có 1 symbol mới đưa vào mình chỉ cần tính distance đến 60% dữ liệu thôi
+60% với 80% nó khác là ảnh hưởng đến cái kết quả đầu ra của mình thương ứng
+trend test size này thì thông thường lúc mà các bạn thực làm thì nó sẽ không có 1 công thức cụ thể
+nhưng mà theo kinh nghiệm của mình với một số cái nhà nghiên cứu người ta làm thực nghiệm thì các tỷ lệ tỷ lệ vàng mà họ dùng
+thì có thể là gì các bạn, 1 là họ sẽ dùng 73, thì các bạn nhớ giúp mình thôi, có thể là 73, có thể là dùng tỷ lệ là 64 hoặc là 82
+thông thường các tỷ lệ họ sử dụng dùng, có bài, có công trình nghiên cứu họ dùng 64, có công trình nghiên cứu họ dùng 73, có công trình nghiên cứu họ dùng 82 thì các tỷ lệ các bạn có thể tham khảo
+để các bạn dùng cho cái mộ cái chỗ test size này
+Thích kế thư viện dạng interface dù không làm vội fit
+Thông thường các bạn thấy đến thời hôm nay các bạn thấy fit làm gì không các bạn, các bạn có thể nhận định fit làm gì không
+thì theo các bạn nếu mà fit mình truyền vào each trend, each trend thì nó sẽ làm gì các bạn
+Nếu mà mình có each trend, each trend thì lúc này các bạn fit nó sẽ làm gì ha
+Nếu mà nó chỉ lưu với liệu thôi thì cũng không cần tip đúng không các bạn
+Log liệu trình bộ nhớ đúng không, các bạn thử thử ha, mình đặt trong câu hỏi này xem các bạn tạo lượng như thế nào
+Nếu mà mình có những thao tác như vậy thì không cần gọi cái fit làm gì đúng không các bạn
+Thì thực sự khi mà họ define ra 1 cái interface thì các bạn thấy cái fit này sẽ dùng cho tất cả các phương thức
+Các phương thuốc không chỉ làm cái canion
+Nếu các bạn muốn tích độ chính xác các bạn có thể gọi cái hạm accuracy score này các bạn
+Các bạn chuyển vào itest, các bạn chuyển vào iridisk
+Rồi sau đó các bạn sẽ làm tròn 2 chỉ số phần tập hôm tết, trả bề cho mình 97%
+Còn nếu các bạn muốn dùng classification report, các bạn nó sẽ trả bề cho các chỉ số precision record F1
+Vâng toàn các bạn có thể đánh giá được mô hình nào tốt hơn mô hình nào
+Thông qua các chi số này
+Kế tiếp của mình là mình làm thế nào để mình chọn lựa cái khay hợp lý đúng không các bạn
+Thì mình sẽ dùng bộng 4 thôi
+Mình chạy từ 1 đến 30 chân hàng
+Sau đó là ứng với từng cái giá trị của khay
+Mình gọi cái khay neighbor classifier vào đúng không các bạn
+Rồi mình tính cái độ chính xác ứng với trường hợp khay bằng 1
+Rồi độ chính xác ứng với trường hợp khay bằng 2
+Sau đó mình sẽ open hết tất cả này vào trong cái anh này
+Thì ngay ở đây các bạn thấy sau đó là mình sẽ đưa cái anh này
+cái anh accuracy core đúng không các bạn
+Rồi các bạn sẽ chọn lựa khay nào tốt nhất
+cho vào để mình tìm cái giá trị mắc của này
+Lúc nếu các bạn tìm mắc thì khá khứ cho trả phần cái này là trả phần tốt tốt nhất đúng không các bạn
+Nếu có thể dẫn đến mình bị overp destroys
+Nếu các bạn chọn thì các bạn lưu ý cho mình trong trường hợp này
+Lúc nguyên mình phải có kinh nghiệm để mình có thể chọn lựa được cái khay
+Nhưng mà đây là 1 thông tin để hỗ trợ cho mình tìm được cái khay tốt nhất
+Các bạn đọc đề xét về Telecustomer
+11 input, 1 output, 4 loại
+1, 2, 3, 4, tương tự giống như lúc nãy
+Đọc dự liệu lên, sau đó các bạn sẽ chứng hóa
+Lúc là 2, 3, lúc là 13, lúc là 14, lúc là 15
+Lúc là 2, 3, lúc là 13, lúc là 100
+Mình sẽ chứng hóa nó về trong khoảng từ 0 đến 1
+Thì thuộc các bạn muốn chứng hóa theo dạng nào
+Mình sẽ scale nó về trong một chứng để mình so sánh nó dễ hơn
+Sau đó các bạn cũng tách dự liệu mình thành 2 phần
+1 phần dùng để trend, trend là phần mình dùng để so sánh khoảng cách to lường distance
+Từ new sample đến tập đó, chứ không phải là mình trend theo cách truyền thống của Supervibe
+Tại vì mình đặt cái tên là trend và test
+Nhưng mà bạn nhớ chứ mình là cái bộ này mình không dùng để trend
+Thế là mình đưa vào, chút nữa mình tính cái khoảng cách để mình tìm ra khen gần nhất
+Rồi tương tự như vậy, mình cũng gọi cái hàm ở đây
+Mình sẽ có cái gọi carnival, black fryer, chuyển vào cái khen bằng bao nhiêu
+Mình gọi fish, sau đó mình gọi predict, trả về cho mình kết quả dự đón của khen nand
+Sau đó mình dùng accuracy score để mình đo luật đồ chính xác
+Thì ở đây nó trả về cho nếu mình chọn khay bằng 4
+Trà sự mình chọn khay bằng 4 thì nó trả về cho mình là đồ chính xác của mình là 0.32 tương ứng nha
+Rồi bây giờ mình cố gắng mình tìm cái khay nào tốt nhất đứng với tập dự liệu telecustomer này
+Cũng tương tự như lúc nãy đúng không các bạn, mình sẽ dùng mồm 4
+Mình cho cái khay của mình nó chạy từ mẫu 40
+Rồi, lúc này mình thấy, lúc này các bạn thấy gì?
+Lúc này các bạn thấy gì? Mình thấy một cái mới nữa các bạn
+Ở cái hàm khay neighbor classifier đó các bạn
+Thay vì những ở trên, các bạn thấy là mình chỉ truyền mỗi cái anh gì các bạn
+Mình truyền mỗi cái khay của mình bằng máy thôi
+Bây giờ mình lại thêm một thăm số nữa là weight
+Thì như vậy cái weight này có nghĩa là gì?
+Mình sẽ sắp sắp sửa mình thảo lượng ở những cái phần kế tiếp đó các bạn
+Rồi, bây giờ mình sẽ tiếp ha, bây giờ các bạn xem coi
+Bây giờ mình trả sử tạm thời mình bỏ qua cái này đi ha
+Mình sẽ tảo lượng cái này ở những phần kế tiếp sắp tới
+Sắp tới cái chỗ là nếu mình chọn khay là số lẻ
+Thì mình sẽ cần cái weight này
+Thì sau khi mình làm xong, hãy ứng với từng cái khay
+Các bạn sẽ tính được cái độ chính xác đúng không các bạn?
+Hoặc là các bạn tính được cái R
+Thì lúc nãy thay vì mình quan tâm cái accuracy
+Thì có thể bây giờ mình quan tâm cái R
+Thì các bạn sẽ plot cho mình cái R
+Thì nếu trường hợp cái accuracy
+Các bạn sẽ chọn cái accuracy cái độ chính xác cao
+Để các bạn chọn lượt cái khay
+Nhưng mà đối với đồng hợp
+Nếu mình thay vì mình quan tâm cái accuracy
+Nếu mình quan tâm về cái error
+Cái lỗi á, thì có thể là
+Mình sẽ chọn cái khay nào
+Mà có cái error nhỏ nhất cho hàng
+Mình modify một xíu chỗ này để các bạn
+Nhìn thấy đa dạng kết quả trả về thôi
+Thay vì lúc nãy mình tính accuracy
+Thì bây giờ mình sẽ tính lỗi thôi
+Lỗi trung bình
+Được không các bạn?
+Thì nó sẽ trả về cho mình ứng với từng cái khay
+Thì nó trả về cho mình cái lỗi tương ứng là gì
+Đúng không các bạn?
+Thì các bạn sẽ chọn
+Chọn lượt cái khay tương ứng
+Đúng không các bạn?
+Giả sử mình chọn cái khay
+Giả sử mình chọn cái lỗi nhỏ nhất
+Ở đây thì cái khay sắp xử
+Chắc là tầm khoảng 37, 38 gì đó
+Đúng không các bạn?
+Nó trả về kết quả tương ứng cho mình
+Đây 37 nè các bạn
+Nó trả về ứng với khay bằng 37
+Thì bộ phương mình của các bạn
+Đạt độ
+Cách error nhỏ nhỏ nhất
+Nho hơn các bạn
+Hoặc là nếu các bạn không dùng error
+Các bạn thay dụng accuracy cũng được
+Thì các bạn plot được đồ tương ứng giống như vầy
+Thì nếu các bạn dụ vào đây các bạn thấy là
+Và cũng tại 37 thì cái error của các bạn
+Cũng đạt cái error nhỏ nhất
+Thì mình hoàn toàn vô đây
+Mình có thể dựa vào 1 kênh tham khảo
+Để mình có thể
+Chọn lượt cái khay
+Và mình có thể dùng cái này
+Để mình chọn lượt cái metric luôn các bạn
+Các bạn sẽ có nhiều metric khác nhau
+Từng metric các bạn trả về accuracy
+Từng metric các bạn trả về
+Các precision
+Từng metric các bạn trả về recall
+Từng metric các bạn trả về
+F1 score
+Rồi các bạn plot đồ thị lên
+Trúc đó các bạn sẽ biết được là
+Cái metric nào sẽ phù hợp
+Với lại cái dataset mình đang
+Giải quyết
+Rồi bây giờ cái dataset mình quan tâm nữa
+Ở đây là cái việc
+Nếu mà khay của mình
+Là số
+Chẳng
+Thì nó như thế nào các bạn
+Rồi bây giờ các bạn cùng
+Mình xem 1 cái bí dụ ở đây đi
+Các bạn có
+Mình sẽ cho các bạn khoảng 30 giây
+Các bạn nhìn giúp mình cái lượt đồ này
+Thì các bạn có nhận xét gì
+Về cái lượt đồ này các bạn
+Các bạn có
+Cơ hội mình là
+Các bạn có tìm thấy
+Bất kỳ cái điểm khác nhau
+Giữa 2 cái lượt đồ này hay không
+Trong trường hợp là
+Các bạn thấy là
+Mình sẽ chạy K&N
+Với cùng 1 bộ
+Data set được không các bạn
+Và cùng 1 cái distance
+Metric luôn
+Nếu mà dùng
+Little distance thì
+Cả 2 cái đều dùng luôn
+Thì theo các bạn giữa 2 cái này
+Các bạn thấy có điểm gì khác
+Giữa 2 mô hình này hay không
+Thì các bạn xem giúp mình thử coi
+Thì nó sẽ là
+Khác nhau như thế nào nha
+Xem thử coi 2 cái này
+Nó có khác nhau không
+Thì nếu các bạn quan sát
+Cái 2 cái mô hình này
+Thì các bạn thấy
+Mình thấy có 1 bạn nhận xét này
+Nếu mà trường hợp K của mình là
+Số chẳng các bạn
+Thì cái mô hình của mình
+Nó sẽ không có stable
+Các bạn hình dung là
+Giả sử nếu mình
+Cùng dùng 1 cái giải thực
+K&N
+Trên cùng 1 tập data set
+Thì các bạn thấy là
+Cái gì?
+Nếu mình chạy 2 lần
+Lần thứ nhất mình chạy
+Lần thứ 2 mình chạy
+Thì ứng với trường hợp K bằng số chẳng
+Thì có thể là
+Cái kết quả dự đón của các bạn
+Nó sẽ không ổn định
+Nếu các bạn còn nhớ lúc nãy là gì
+Lúc thì
+Nếu mình chọn K bằng 4
+Thì có thể là
+Nếu mà có 2 cái
+Thuộc 1 class A
+2 cái thuộc class B
+Mình sẽ confuse
+Mình không biết mình nên chọn A và B
+Cái A và B đúng không các bạn
+Nhưng nếu các bạn quan sát chỗ này
+Nếu mà tài cái K bằng 3
+Nếu K bằng 3
+Cái độ chính xác tầm là 0.76 đúng không các bạn
+Trường hợp là nếu các bạn map qua
+K bằng 3
+Cũng là 0.76
+Đúng không các bạn
+Và nếu các bạn map xuống trường hợp
+K là số lẻ
+Thì các bạn thấy nó sẽ
+Giống nhau
+Nhưng mà tại trường hợp
+K là số chẳng các bạn
+Thì lúc các bạn thấy là gì
+Lúc thì nó trả về cho mình
+Cái độ chính xác như đây
+Lúc là nó trả về cho mình độ chính xác như vậy
+Tại vì có thể là
+Cái A bên đây
+Nó redid cho mình là class A
+Có thể là A bên đây
+Nó sẽ redid cho mình là class B
+Tại vì cả hai class đều bằng nhau
+Về việc mình watch mặt độ
+Nên vậy
+Tại vì cả hai anh đều 50% là A
+Và 50% là B
+Vì vậy
+Cái niết ứng với data set
+Cái new sample mình cần phân lội
+Thì mình chọn A cũng đúng
+Mình chọn B cũng đúng
+Lúc này có thể là
+Lúc thì mô hình mình chọn A
+Lúc thì mô hình mình có thể
+Nó chọn B trong trường hợp này
+Chẳng đến là khi
+K của bạn là số chẳng
+Thì lúc này nó sẽ không có stable
+Nó không có ổn định
+Được hả
+Vì vậy mình sẽ cố gắng
+Mình giải quyết vấn đề này
+Nhưng mà để giải quyết vấn đề này
+Bây giờ mình sẽ review lời
+Các bước của kanel
+Đầu tiên là mình sẽ load dữ liệu
+Sau đó là mình sẽ
+Chọn lùi cái khay được không các bạn
+Rồi kế tiếp là mình sẽ làm gì các bạn
+Mình sẽ ứng với lại
+Cái từng dữ liệu của mình
+Mình sẽ làm gì
+Mình sẽ tính cái distance
+Đúng không các bạn
+Mình sẽ tính cái distance
+Giữa cái test data của mình
+Đến tất cả những cái dòng
+Trong trending set của mình
+Rồi là cái bộ dữ liệu
+Mình tính distance
+Thì cái distance của mình
+Có thể dùng nhiều distance khác nhau
+Mình gửi ý cho các bạn
+Một số distance thôi
+Sau đó mình sẽ
+Sắp ship cái distance
+Theo thứ tự tăng dần
+Đúng không các bạn
+Hoặc là giảm dần gì đó
+Để các bạn có thể
+Chọn lựa
+Khay canh nhỏ nhất
+Canh gần mình nhất
+Sau đó mình sẽ lấy
+Khay canh gần mình nhất
+Giờ mình xử khay bằng 5
+Các bạn sẽ chọn
+5 anh có distance nhỏ nhất
+Ví dụ vậy
+Sau đó bước số 7 là gì các bạn
+Mình sẽ
+Sau khi mình lấy được
+Khay canh gần nhất rồi
+Thì mình xem coi
+Trong khay canh gần nhất đó
+Thì cái class nào
+Cái mặt độ nó cao nhất
+Đúng không các bạn
+Thì đúc đó là gì các bạn
+Mình sẽ trả về
+Cái kết quả mình
+Với vậy
+Theo các bạn
+Trong
+8 bước
+Chi tiết mà liệt kê
+Giống như vậy
+Thì cái bước nào
+Nó sẽ bị ảnh hưởng
+Khi mình
+Chọn cái
+Khay là số chặn các bạn
+Đấy
+Các bạn phân tích cho mình chỗ này
+Trong
+8 bước
+Thì cái bước nào
+Các bạn thấy
+Khi mình chọn số
+Khay là số chặn
+Thì nó sẽ là vấn đề
+Mình gặp phải
+Chỗ này
+Sao mình
+Thu nhỏ cái này được
+Đấy
+Chờ mình một xíu
+Rồi
+Cái bước số mấy các bạn
+Bước số
+Số 6
+Số 7
+Thì mình thấy
+Đa phần các bạn
+Chọn lựa mình là bước
+Các bạn
+Là bước số 7 nè các bạn
+Tại vì bước này
+Sẽ là cái bước
+Nó ảnh hưởng đến việc
+Mình chọn
+Khay là số chặn hay số lẻ
+Tại vì nếu các bạn
+Chọn cái khay là số lẻ
+Thì hoàn toàn cái việc
+Các bạn chọn lựa
+Cái class nào
+Nó xuất hiện nhiều nhất
+Để mình cho
+Nó là kết quả dự đoán là
+Ok là
+Cái label nào đó
+Nhưng mà nếu mình
+Chọn nó là số chặn
+Thì lúc này các bạn thấy là
+Cái gì
+Nó sẽ là vấn đề
+Đúng không?
+Tại vì
+Nếu số chặn này
+Có thể là mình 2 cái
+A là
+Mật độ
+Canh mà cao nhất
+Mình dùng cái canh
+Cả 2 anh đều bằng nhau
+Nhưng mà lúc này
+Có thể là rất là khó
+Để mình chọn
+Lựa cái nào
+Lúc này mình sẽ làm
+50 50
+Cái nào cũng đúng
+Cái số 7 nha
+Số 7 là cái này
+Mình quan tâm nha
+Bây giờ mình
+Đi tiếp
+Mình giải quyết cái này
+Thì bây giờ để giải quyết cái này
+Các bạn thấy
+Cái vấn đề mình là ở đây
+Bây giờ mình
+Sẽ sẽ
+Thử nha
+Mình thử mình
+Đưa cái ví dụ cho các bạn
+Ở đây các bạn xem thử
+Một cái là
+Mình sẽ dùng cái
+Anh S.K.
+Lên
+Dùng thư viện S.K.
+Lên
+Được không các bạn
+Đấy
+Và ở đây
+Mình dùng cái giải thực của mình
+Được gọi là
+Dùng cái
+Root Forge
+Root Forge
+Có nghĩa là
+Có nghĩa là
+Mình có
+Một cái
+Giá sử mình có 10
+Cái sample ở trong data set
+10 sample
+Trong data set
+Và mình có
+Một cái data mới
+Làm cái new sample
+Thì lúc này
+Root Forge là gì
+Các bạn sẽ tính khoảng cách
+Từ cái anh này đến tất cả
+Những anh còn loại
+Đóng ra data set của mình là
+Root Forge
+Sau đó các bạn lấy
+Cái khay anh gần nhất
+Trong lúc này
+Mình sẽ bàn nhiều
+Cái giải pháp khác nhau
+Để khắc phục nược điểm
+Của cái Root Forge này
+Tại nếu dữ liệu mình ít
+Các bạn
+Thì mình dùng cái giải thực
+Root Forge là dễ
+Nhưng mà giải sử
+Và hình dung chuyện gì sẽ ra
+Nếu data set của mình có
+Là 1 triệu sample đi
+Bây giờ
+Các bạn phải tính khoảng cách
+Từ dữ liệu mới đó
+Đến tới 1 triệu sample
+Các bạn phải tính
+Distance 1 triệu lần
+Các bạn hiểu không
+Như vậy
+Mỗi lần các bạn muốn
+Giữ đón
+Các bạn phải tính
+Distance 1 triệu lần
+Mỗi lần các bạn muốn
+Giữ đón
+Các bạn phải tính
+Distance 1 triệu lần
+Như vậy
+Cái việc sử dụng giải thực
+Root Forge chỗ này
+Mặc định
+Nếu các bạn không
+Không truyền vô
+Mặc định
+Cũng là sử dụng
+Root Forge
+Đúng không các bạn
+Như vậy các bạn thấy
+Trong đường hợp này là gì
+Là lâu đúng không
+Các bạn còn bị giúp mình không
+Đấy
+Nhưng mà các bạn thấy bây giờ
+Nếu mà thay vì mình
+Sử dụng cái
+Root Forge
+Thì các bạn thấy trường hợp gì
+Sẽ ra
+Nếu mà trong cái dữ liệu của mình
+Nó các bạn
+Là giá sử các bạn có dữ liệu
+Và chuyện gì sẽ ra
+Nếu mà nó
+Tổ chức cái dữ liệu của mình
+Theo 1 cái dạng cây nào đó
+Để giúp cho cái quá trình
+Mình
+Tính cái Distance
+Cái Neural Distance
+Nó
+Nó
+Nhanh hơn đó các bạn
+Đấy
+Thì thật sự là bước này là
+Là cái bước mà cái hàm
+Thì thật sự là bước này là
+Là cái bước mà cái hàm
+Fish này
+Nó sẽ xây dựng cho các bạn
+Có nghĩa là gì
+Nó sẽ tổ chức cái dữ liệu của các bạn
+Theo 1 cách nào đó
+Để thay vì các bạn
+Có 1 dữ liệu mới
+Các bạn
+Phải tính Distance
+Tến tất cả
+Những anh còn lại
+Lúc đó
+Các bạn mới có biết được
+Kayan gần nhất
+Thì chuyện gì sẽ ra
+Nếu có 1 cái giải thật nào đó
+Nó hậu trợ
+Nó tổ chức dữ liệu của bạn
+Theo Root dạng cây
+Bây giờ
+Khi có dữ liệu mới
+Muốn tìm Kayan gần nhất
+Hỏi coi
+Nó tổ mãn điều kỳ chạy nút góc này hay không
+Nếu mà tổ mãn
+Mình sẽ đi sang trái
+Không tổ mãn
+Mình đi sang phải
+Như vậy lúc này
+Mình sẽ
+Đỡ bớt được
+Cái việc mình tính Distance
+Đến những anh còn lại bên đây
+Được không
+Vì vậy
+Mình sẽ đi
+Dánh trái, đi dánh phải
+Thứ tựa đây mình đi tiếp
+Vì vậy
+Các bạn hình dung Nomina
+Ngay chỗ hàm Fish này
+Thì chúc nãy mình xem
+Cái cách nó sẽ tổ chức
+Nó sẽ tổ chức lại dữ liệu của mình
+Nên Nomina các bạn thấy
+Mình có dữ liệu
+Điều tổ chức
+Đây là hồi nào để mình có thể
+Lúc mình tính Distance
+Nó sẽ nhanh hơn
+Thay vì mình phải vét cạn
+Thì sẽ có giải thật nào đó
+Giúp mình không vét cạn hết giải thật
+Tại vì nếu 1 triệu
+Cái sample mà các bạn tưởng tượng
+Mỗi lần mình ridiculous
+Chắc nhiều khi mất
+Mất cả mấy phút
+Mới có thể diệt hết được
+Một triệu sample
+Tính Distance là được
+Đủ thứ cắt
+Các bạn
+Thì đây là cái phần giải thích về cái
+Root Fork
+Mặc định mình dùng là Root Fork rồi
+Matrix này mình dùng là
+Early Distance
+Nếu các bạn muốn dùng Matrix khác
+Thì đây là cái việc mình sử dụng
+Thư viện SKLearn
+Còn đây là cái việc mình
+Mình tự mình viết lại
+Cái
+Knen của mình
+Các bạn
+Thì ở ràng các bạn thấy
+Mình chứng minh đây là gì
+Nếu trong trường hợp
+Cái khe của mình là số lẻ
+Thì cái kết quả của
+Cái chương trình mình tự viết
+Nó sẽ giống với cái
+Thư viện của SKLearn
+Được không các bạn
+Nhưng mà trong trường hợp
+Nếu mà cái khe của mình là số chặn
+Đúng không các bạn
+Thì các bạn thấy nè
+Cái kết quả của mình
+Nó sẽ khác với cái kết quả của SKLearn
+Vậy nó chỉ khác ngay cái chỗ là số chặn thôi
+Đúng không các bạn
+Thì lúc này mình thấy cái việc
+Cái gì sẽ ra ở đây
+Trong trường hợp nếu là số chặn
+Thì cái việc chọn lựa chỗ này
+Giữa 2 mô hình
+Đúng không các bạn
+Nó sẽ có các sự không ổn định
+Thì cái code này mình cũng có
+Chia sẻ với các bạn ở trên đây
+Nếu các bạn có điều kiện các bạn có thể
+Có thể tham khảo thêm cái code ở đây
+Mình có chia sẻ nha
+Cái này là mình sẽ tự viết lại cái khenen này
+Được không các bạn
+Cái này mình sẽ dùng cái thư viện nha
+Một cái nữa là mình sẽ so sánh
+Để các bạn thấy xem cái việc mình so sánh ở đây nè
+Một cái khenen trong SKLearn
+Và một cái khenen mình modify
+Thì các bạn có thể xem chỗ này
+Cái khenen modify đây
+Thì cái khenen modify để mình chéo lên trên cho các bạn đây
+Đây là khenen mình modify
+Tức là mình tự hiện thực lệ khenen
+Và mình set trường hợp nó là số chặn
+Để mình set thì
+Khi mình so sánh giữa hai cái này
+Các bạn thấy một vấn đề sẽ ra
+Trong trường hợp là số lệ
+Thì mình thấy nó thống nhất về kết quả
+Nhưng mà chỉ ngay trường hợp khe là số chặn
+Các bạn thấy là gì
+Khe bằng 2 hoặc là khe bằng 4 lớp bằng
+Thì lúc này các bạn thấy kết quả không stable
+Tại vì lúc này 50-50
+Có thể là cái cách mà mô hình mình chọn
+Nó sẽ chọn thuộc về cái class thứ nhất
+Còn có thể là bên cái thiện thực của khenen
+Trong x khe lên
+Thì nó lại chọn cái anh số 2 chẳng hạn
+Nên lúc này nó sẽ dẫn đến sự không thống nhất
+Về mặt kết quả
+Nhưng mà mình phải tìm cách mình giải quyết cái anh này
+Bây giờ mình sẽ coi nó sẽ giải quyết như thế nào
+Vì vậy bây giờ thay vì mình
+Chọn khenen nearest neighbor
+Thì bây giờ mình thiêm một cái nữa
+Được gọi là weight là trọng số
+Bây giờ mình xem coi trọng số đây có nghĩa là gì
+Bây giờ các bạn xem
+Mình giúp mình một cái định nghĩa này để mình định nghĩa xem
+Như nó mở rộng thêm một thực ngữ được gọi là weight
+Vì vậy trong trường hợp nếu khe là số chẳng
+Nó đặt khe là số lẻ được không các bạn
+Vì vậy trong trường hợp nếu mà khe là số lẻ
+Thì hoàn toàn mình biết mình giữ đón được
+Cái liệu mới của mình sẽ sắc cố
+Thực mình một hình ngôi sao màu xanh dương
+Đúng không các bạn
+Nhưng mà trong trường hợp này thì sao các bạn
+Trường hợp này các bạn thấy là gì các bạn
+Mình không biết mình chọn lựa cái nào
+Đồng ý không hả
+Vì vậy trong trường hợp này
+Xác bị ngược
+Lúc này các bạn thấy là
+Thì theo các bạn lúc này
+Mình sẽ phân lợi nó là
+Màu xanh hay màu đỏ đều đúng đúng không các bạn
+Tại đến thời điểm này
+Cái ngựa cảnh mình thấy là gì
+2 là màu xanh và 2 là màu đỏ
+Vì vậy mình chọn xanh và đỏ đều đúng
+Nhưng mà mình quan sát là gì các bạn
+Có phải là cái ngôi sao màu xanh này các bạn
+Nó sẽ gần cái dữ liệu mình
+Mình
+Cần phân lợi đúng không các bạn
+Vì vậy nếu mà
+Cái book watching của mình
+Mình cần thêm cái thông tin
+Cần thêm thông tin về
+Cái khoảng cách
+Từ cái anh này đến này
+Đúng không ạ
+Tức là mình thêm về cái mặt trọng số đó
+Vì vậy thay vì mình watching theo cách bình thường
+Thì các bạn hình dung nếu mình watching theo cách bình thường
+Có nghĩa là 4 ngôi sao
+Để mình giải thích lại cho nó dễ
+Nếu mình có 4 ngôi sao
+Thì kinh pop tin có phải là 2 ngôi sao màu xanh
+Và 2 màu đỏ
+Vì vậy có phải là mỗi cái ngôi sao này
+Đều có tiếng nói bằng nhau vào kinh pop tin
+Đúng không ạ
+Nôm nay mình gọi cái này được gọi là
+Eco contribution
+Mỗi cái này
+Đều có đóng góp bằng nhau
+Đều có tiếng nói bằng nhau
+Vào trong phân lợi cuối cùng
+Nhưng mà về thực tế các bạn thấy là
+Những cái anh càng gần mình
+Thì cái contribution
+Nó phải cao hơn
+Nôm nay mình sau này
+Các bạn sẽ gặp
+Mình cái buổi của decision tree
+Mình sẽ gặp lại cái này được gọi là
+Amount of C
+Có nghĩa là cái tiếng nói của anh đó
+Vào trong cái kết quả cuối cùng
+Nó sẽ cao hơn so với những anh này
+Vì vậy mình có nhận định là gì các bạn
+Những cái anh càng gần cái sample
+Nhưng cái trọng lượng của ảnh vote tin
+Vào trong kết quả cuối cùng sẽ cao hơn
+Vì vậy mặc dù có 2 anh màu xanh 2 anh màu đỏ
+Nhưng mà 2 anh màu đỏ
+Nó gần hơn cái sample của mình
+Vì vậy cuối cùng mình nên phân lợi cái này
+Là 2 anh màu đỏ đúng không các bạn
+Vì vậy lúc này mình phải cần đưa vào
+Một cái chỉ số nào đó
+Một thông số nào đó
+Để làm sao cho 2 anh này có tiếng nói
+Nhiều hơn vào trong cái
+Kết quả dự đóm cuối cùng của mình
+Thay vì như vậy thì mình nói về mặt lưu thiết
+Mặt lưu thiết thì họ sẽ đưa mình thành công thức luôn
+Vì vậy họ sẽ tính distance từ đây đến đây
+Vì vậy anh nào mà distance càng gần
+Thì cái tiếng nói
+Hay cái trọng lượng ảnh vote tin
+Vào trong kết quả cuối cùng càng cao
+Anh nào cái distance càng xa
+Thì cái trọng lượng hay là cái amount share của ảnh
+Vào việc vote tin cái kết quả cuối cùng càng ít lợi
+Sau đó lúc này mình sẽ chọn lựa được
+Cái anh tương xứng được không các bạn
+Bây giờ mình sẽ tiếp tục ha
+Bây giờ mình sẽ xem
+Anh này càng gần thì tiếng nói vote tin càng lớn
+Anh này càng xa thì tiếng nói
+Mặc dù hai anh này đều là
+Hai màu xanh hai màu đỏ
+Nhưng mà mình sẽ có thêm một cái trọng số
+Thế hiện cái amount share
+Thì nó sẽ có các cách thức khác nhau
+Mà mình thể hiện cái trọng số ở đây
+Bằng cái waist
+Thế nhất là uniform waist
+Có nghĩa là mình xem như là
+Trọng số bằng nhau
+Tất cả các anh đều có tiếng nói bằng nhau
+Thế nên mình không quan tâm ở gần hay ở xa
+Nếu mà anh này thì mình đều vote tin là một
+Anh này đều vote tin là một
+Anh này cũng đều vote tin là một
+Anh này cũng đều vote tin là một
+Nhưng mà nếu mình có hình mặc định như vậy
+Thì các bạn chạy, các bạn không đưa hình mặc định gì hết
+Dùng thư viện Kennedy's neighbor
+Thì nó sẽ dùng uniform waist để mặc định cho các bạn
+Còn nếu các bạn chuyển qua
+Distance waist
+Thì các bạn thấy là dùng công thức này các bạn
+Nó sẽ là một
+Chi cho cái khoảng cách
+Các bạn tính được từ đây
+Vì vậy các bạn thấy là
+Nếu mà cái D này càng nhỏ thì sao các bạn
+Cái trọng số này sao các bạn
+Rồi xử các bạn hình dung trong trường hợp này
+Nếu D này càng nhỏ thì trọng số này
+Nó sẽ càng lớn, đúng không các bạn
+Và nếu là
+D này càng lớn thì trọng số
+Nó sẽ càng nhỏ, như vậy nó sẽ đưa
+Thông số này để nó tính cho mình
+Cái Distance waist
+Để nó tính vào việc vote
+Vote tin xem là màu xanh hay màu đỏ
+Tương ứng chỗ đây đó các bạn
+Rồi
+Bây giờ còn nếu mà các bạn thấy là
+Thay vì các bạn dùng ở đây công thức mặt định của này
+Một chi cho khoảng cách các bạn tính được
+Hay là cái độ tương đồng với hai feature
+Thì nếu các bạn muốn định nghĩa một cái hàm khác
+Thì trong đó mình sẽ hướng dẫn cho các bạn
+Mình tự định nghĩa ra cái hàm tương ứng của mình luôn
+Rồi bây giờ mình sẽ ví dụ
+Bây giờ mình truyền vào
+Cái neighbor của mình là 8
+Là số chẳng được không các bạn
+Và cái waist của mình là uniform
+Rồi
+Cái p ở đây của mình
+Mình set thành
+Thành 2 ở đây
+Các bạn đón giúp mình cái p là gì không các bạn
+Neighbor mình là 8
+Waist là 2
+Waist là uniform
+Tức nghĩa là mình đánh trong số bằng nhau
+Không cần quan tâm trong số
+Mặt định nếu các bạn không dùng cái này thì mặt định cũng là uniform rồi
+Mình ghi cho nó tường minh thôi
+B bằng 2 các bạn đón giúp mình
+Thông số b bằng 2 là cái gì
+Tính xác là cái
+Metric lúc này các bạn thấy mình sẽ có nhiều
+Metric khác nhau
+Các bạn nào muốn biết b bằng 1, b bằng 2, b bằng 3, b bằng 4, b bằng 5
+Mình thấy là các bạn đọc
+Giúp mình 1 tài liệu của cái anh này
+Thì nó đơn giản là mình chọn cái metric tương ứng của mình là cái gì
+Lúc nãy mình có ví dụ ở đây
+Mình chọn cái
+Thay vì mình ghi cụ thể metric của mình là at least distance
+Các bạn có thể chọn lựa tương ứng ở đây
+Rồi thì cái hàm số cuối cùng
+Là cái metric mà các bạn chọn thôi
+Tì thuộc vào cái hệ số tương ứng
+Các bạn chọn lựa tương ứng là 123 thì các bạn sẽ có cái metric tương ứng
+Rồi sau khi mình
+Gọi xong thì mình gọi cái
+Redist, mình chuyển vào estet thì nó trả bằng cho mình 1 cái
+Anh này, cái bảng
+Recreation Recall và Accuracy
+Trong 1 hộp mình dùng cái uniform
+Thì Accuracy của mình đây là 96%
+Được không ha, tức là mình
+Không quan tâm về cái tiếng nói của từng
+Cái sample để trong
+Việc watching đó, và bây giờ cái tip
+Nếu các bạn dùng cái distance này các bạn
+Thì các bạn thấy là cái Accuracy
+Lên cho mình tới 97.3%
+Thì lúc này các bạn thấy rõ ràng là cái việc
+Đưa cái
+Omox, đưa cái Wave vào trong cái
+Việc mình dự đoán ở đây nè các bạn
+Thì nó sẽ tốt hơn, đúng không hà, tại vì lúc này
+Cái việc watching nó không phải dựa vào là
+Các anh này đều có tiếng nói
+Bằng nhau vào việc watching mà mỗi anh sẽ có
+Tiếng nói khác nhau thông qua cái trọng số
+Vì vậy, anh này càng gần, thì cái watching của
+Anh sẽ trọng lượng cao hơn so với những anh
+Ở xa ở đây, và lúc này nó sẽ
+Chính xác hơn, đó là do tại sao khi các bạn thực nghiệm
+Các bạn thấy nếu mình dùng cái
+Wave của mình là Uniform, tức là
+Tất cả các anh đều tiếng nói bằng nhau
+Đúng không hà các bạn, thì đồ chính xác là
+96%, còn nếu mình dùng cái Wave
+Cái Wave của mình là Distance
+Thì cái đồ chính xác nó sẽ là 97.33%
+Được không hà, đó là cái
+Cái mình muốn nhấn mạnh ở đây, là mình giải quyết
+Trường hợp K của mình là số chẳng
+Rồi, trong đường hợp
+Nếu các bạn, đường hợp này nếu mình dùng cái Wave đây
+Thì mình sẽ giới hạn
+Vào những cấu hình thông số mặc định của K-Neighbor
+Mình chỉ có thể Uniform Distance thôi
+Bây giờ nếu mình muốn định nghĩa
+Một công thức tính Wave khác
+Thì làm thế nào mình định nghĩa được
+Thì bây giờ mình sẽ hướng dẫn cho các bạn cách thức mình định nghĩa luôn
+Vì vậy các bạn sẽ Define một cái hàm
+Vì vậy trong hợp này các bạn sẽ Define cho mình một cái hàm
+Custom Wave, có nghĩa là các bạn muốn tính công thức nào cũng được
+Các bạn muốn đưa công thức nào
+Thì hàm Custom Wave này các bạn đưa vào chỗ này
+Vì vậy ngay trong cái Wave này
+Thay vì các bạn truyền cái Distance là cái
+Từ khóa, là cái Keyword
+Mình phải truyền vào để cho cái hàm
+Nó hiểu, bây giờ mình sẽ tự định nghĩa luôn
+Tự định nghĩa cái Wave mình muốn
+Vì vậy các bạn thay đổi công thức
+Thay vì mình tính cái Wave của mình bằng 1
+Chia Distance, thì bây giờ mình muốn cái Wave của mình bằng cái gì
+Sẽ bằng apply công thức này
+Như vậy cái Distance mình biết rồi
+Distance là cái khoảng cách giữa hai cái Sample
+Ở hợp này thì thay vì
+Mình apply 1 cái Distance thì mình apply cái hàm
+Tương ứng như mấy
+Về sự Sigma mình set bằng 0.5
+Mình dùng cái hàm Exponent của trường 1
+Thì cái hàm Longnau là cái hàm
+Thay vì mình
+Thiết kế một cái hàm đặc biệt nào đó
+Để là e, mũ, trừ
+Trừ cho Distance
+Thay vì các bạn thiết kế một cái hàm nào đó
+Các bạn muốn các bạn tính
+Cái Wave của 1
+Một Sample
+Với là cái Sample các bạn đưa vào
+Thế là chỗ này nè các bạn
+Các bạn định nghĩa một cái hàm mới
+Thay vì các bạn là 1GD mặc định
+Của cái Kinetic Never
+Một công thức khác để các bạn tính
+Cái Wave chỗ này
+Ví dụ
+Chả sử mình apply công thức chỗ này
+Mình apply cái việc mình tính
+Cái Distance
+Các bạn dùng thiết kế bất kỳ công thức nào cũng được
+Ví dụ là nếu mình có công thức nào đó mới
+Mình có thể đưa vào mình tính
+Cái độ chính xác của mình tương nhiên sẽ giảm rồi
+Mình đưa ra 1 cái
+Ví dụ để các bạn thay là
+Nếu thế này các bạn có idea nào đó hay
+Để các bạn tính Distance là chính xác là cái tiếng nói
+Các bạn có thể thay đổi
+Thay vì mình phải phụ thuộc vào cái hàm
+Có sẵn của SK Lens
+Trong Kinetic Never
+Nếu dùng thì phải giải thích được
+Tại sao chính xác
+Nếu mà mình
+Nếu mình thiết kế được
+Một cái anh nào đó
+Mình phải giải thích được lý do tại sao mình chọn
+Tại sao mình chọn
+Mình thiết kế một
+Công thức để mình tính Distance này
+Mình phải giải thích được nha
+Mình có thể biết được cái hàm mình tự
+Đưa ra
+Mình xác định
+Quay khi dùng
+Trong đường hợp nếu mà
+Trường hợp lẻ thì mình không cần
+Trường hợp nếu mà các bạn muốn
+Trong đường hợp lẻ các bạn muốn quẳng muốn dùng cũng được
+Được hông ha
+Nếu trong đường hợp mình lẻ đi
+Thảo luận thử trong đường hợp nếu mà nó lẻ đi
+Nếu trong đường hợp mà nó lẻ các bạn thấy
+Nếu mình dùng thì có ý nghĩa gì không các bạn
+Và thấy trong đường hợp mà
+Chẳng luôn như mình thấy hiệu quả
+Trong đường hợp mà lẻ thì các bạn thấy
+Nó có công dụng không các bạn
+Để xử mình thảo luận chỗ này đi
+Nếu mình xác định là
+Hay là lẻ mà mình dùng thêm cái trọng số
+Thì các bạn thấy nó có công dụng không các bạn
+Thì các bạn thảo luận thử nha
+Thì
+Thực sự trong đường hợp mà
+Nếu mà nó là số lẻ thì
+Mình có thể tách biệt rõ ràng
+Giống như mình thấy đây nè
+Mình có ví dụ cho các bạn ở đây nè
+Nếu trường hợp khay của mình là số lẻ thì
+Thầu như kết quả của mình nó thống nhất các bạn
+Trường hợp là mình quan tâm
+Mình khay là số chẳng thì mình sẽ giải quyết trường hợp đó
+Tốt hơn
+Nên là trong đường hợp khay là số lẻ
+Thực sự nếu mình đưa vào
+Thực sự ở đây gần thì
+Vóc tin mật độ của mình
+Thực sự ở đây mình tới nhiều canh
+Thực sự ở đây mình có thêm một canh màu xanh đây nữa đi
+Cái khoảng cách ở đây thực sự là
+Mình sẽ quan tâm số luận nhiều hơn
+Như vậy là chỉ khi nào 2 anh 50 50
+Lúc đó mình phải thêm cái quay để
+Mình xác định nên nghiên vào cái anh nào
+Còn trường hợp mình đã tách biệt rõ ràng
+Cái nhóm rồi đúng không các bạn
+Thì lúc này mình sẽ cái việc thêm trộm số
+Thực sự nó cũng không cần thiết
+Trường hợp này nha để các bạn lưu ý
+Trường hợp là đặc biệt trộm suốt giãn thôi
+Thì nó sẽ biết cho mình tốt hơn
+Giờ mình sẽ đi tiếp
+Rồi bây giờ mình thảo luận một cái nữa đi các bạn
+Là về cái bài tỏng của
+Knen cho bài tỏng Regressions
+Thì đương nhiên trong cái trường hợp
+Nếu cái bài tỏng của mình là Classification
+Thì đương nhiên mình dễ dàng
+Mình làm được đúng không các bạn
+Thì mình chọn Knen gần nhất
+Rồi mình watch tin xem trong Knen đó
+Cái label nào xuất hiện nhiều nhất
+Thì đó là cái kết quả mình giữ đó
+Như vậy trong cái bài tỏng Regressions
+Thì theo các bạn nếu mình muốn ấn dụng Knen cho Regressions
+Thì mình ấn dụng như thế nào các bạn
+Bài tỏng dữ liệu Output đầu ra của mình
+Là một giá trị Continuous Prelude
+Chứ không phải là một giá trị rời đạt là
+Giống như Iris của mình sẽ là
+Có 3 lời hóa, mình mở hóa là 0.1.2 đi
+Hoặc là tele customer của mình
+Có 4 loại Soviet
+Thì mở hóa là 0.1.2.3
+Thì nếu mình chuyển qua bài tỏng Regressions
+Thì theo các bạn
+Nếu mà Knen apply cho bài tỏng Regressions
+Thì các bạn thấy
+Cái kết quả giữ đó của mình sẽ được thực hiện như thế nào các bạn
+Các bạn thử comment giúp mình
+Trong đồng hợp bài tỏng Regressions
+Class Regressions là dễ rồi
+Mình lấy Knen gần nhất
+Xong mình coi Knen đó
+Trong 5 anh đó
+Có 4 anh gì đó là A và 1 anh gì đó là B
+Thì mình sẽ phân lội kết quả của mình sẽ là A
+Nhưng mà bài tỏng Regressions thì sao các bạn
+Thì theo các bạn trong đồng hợp này mình làm gì
+Thì các bạn thấy trong đồng hợp Regressions
+Cũng tương tự như vậy các bạn
+Mình cũng chọn Knen gần nhất
+Sau đó là gì các bạn
+Mình tính trung bình của Knen đó lại
+Để mình trả được kết quả giữ đó
+Các bạn sẽ tính trung bình Median
+Và các bạn tính các công thức
+Không kê khác mà các bạn có thể ứng dụng vào
+Thì bây giờ mình chọn K
+Bằng 9 căn hạn
+Sau đó các bạn sẽ lấy 9
+Knen gần nhất
+Sau đó mình tìm được chích năng gần nhất rồi
+Cái dư liệu mình đưa vào
+Từ dư liệu này mình sẽ chọn được chích năng gần nhất
+Mình sẽ tính trung bình chích năng gần nhất đó
+Để mình đưa ra kết quả giữ đóng
+Khác với bài tóm Regressions các bạn nhớ giúp mình nha
+Regressions là mình sẽ vote in
+Còn Regressions là mình cũng chọn lựa được Knen gần nhất
+Sau đó làm gì
+Mình có thể tính trung bình tất cả giá trị của Knen gần nhất lại
+Để mình đưa ra kết quả giữ đóng
+Tại vì bài tóm của mình là bài tóm Regressions
+Chứ không phải là bài tóm Regressions
+Các bạn nhớ giúp mình ở đây
+Đó là cái idea của mình
+Đó là cái idea của mình
+Tổng bộ của Regressions là
+Mình chọn lựa K
+Sau đó mình tính distance
+Sau đó mình tìm K nearest neighbor
+Rồi mình làm gì
+Mình redit chỗ này
+Sau khi mình tìm được K neighbor rồi
+Mình cộng lại, mình chia trung bình tất cả những sample gần nhất của mình
+Để các bạn giữ đón kết quả
+Nó sẽ khác một xíu so với bài tóm Regressions
+Sorry bài tóm Regressions
+Bây giờ mình dừng lại thảo luận thêm một xíu chỗ này
+Nếu mà mình tìm hiểu về giải thật linear Regressions
+Các bạn thấy so sánh Knen giải quyết cho bài tóm Regressions
+Với giải thật linear Regressions
+Các bạn thử phân tích xem cái nào chính xác hơn
+Đương nhiên về bài tóm Classification
+Có thể Knen của mình khá hiệu quả
+Mình vote thêm mật độ thì OK
+Nhưng mà nếu mình chuyển qua bài tóm Regressions
+Nếu mình so sánh với giải thật hồi quy tiến tính
+Thì theo các bạn, giải thật Knen này sẽ tốt hơn giải thật linear Regressions
+Các bạn thảo luận thêm một xíu chỗ này
+Hôm nay mình chỉ tìm hiểu về Knen
+Nhưng mà mình muốn đi một bức tranh mở rộng một xíu
+Để cho các bạn so sánh giải thật khác
+Thì theo các bạn trong trường hợp này
+Knen này mình so sánh với linear Regressions thì sao các bạn?
+Hãy các bạn nói như thế nào
+Nếu đối với giải thật linear Regressions
+Mình sẽ cố gắng tìm một phương trình đường thẳng
+Mà nó phích vào trong dữ liệu tốt nhất đường thẳng màu đỏ
+Khi có một dữ liệu mới đưa vào
+Các bạn sẽ map bin vào trong đường thẳng này để giữ đoán kết quả y tương ứng
+Nhưng mà đối với Knen thì sao các bạn?
+Knen thì sao?
+Thay vì đối với linear Regressions
+Nó sẽ sử dụng một điểm
+Mình map bin vào
+Mình tìm được cái điểm tương ứng VDTI ở đây
+Nhưng mà đối với Knen thì sao các bạn?
+Nó phải làm gì? Nó tính trung bình
+Tất cả những anh xung quanh chỗ này
+Tại nếu mình chọn K thì phải tính trung bình
+Đúng không các bạn? Lấy Knen gần nhất nó trở về
+Thì lúc này các bạn thấy gì?
+Cái độ chính xác của nó so với linear Regressions
+Trong bài tón mà mình dự đoán bút đầu ra là liên tục
+Nó sẽ không chính xác bằng linear Regressions
+Được không các bạn?
+Các bạn nhớ cho mình
+Tại mình phân tích thêm
+Nếu mình cố gắng đối dụng Knen cho bài tón Regressions
+Thì mình làm gì?
+Mình chọn Knen bằng 9
+Mình lấy 9 là gần nhất
+Rồi mình lấy trung bình cái đó lại
+Để mình giữ đoán kết quả cho new sample của mình
+Thì đương nhiên nó sẽ không chính xác
+Bằng việc bạn xây dựng môn hình linear Regressions
+Nó fit vào trong data
+Thì lúc này nó sẽ map bin vào
+Các bạn nhớ cho mình
+Knen cho bài tón classification
+Knen thì nó khá là ổn, khá là ok
+Nhưng mà Knen mình apply cho bài tón Regressions
+Thì cái độ chính xác của nó sẽ không bằng
+So với linear Regressions
+Tại vì nó phải tính trung bình
+Xác định cái tâm hình tròn
+Có nghĩa là trong trường hợp này
+Mình ví dụ thôi
+Đây nè chỗ này nè
+Gia sử đây là sample X của mình
+Gia sử sample X của mình nằm ở đây
+Để mà Knen thì mình sẽ chọn K gần nhất
+Cái tâm hình tròn là mình chọn cái K
+K gần nhất
+Mình thấy các bạn ưu miễn hỏi
+Thì hình tròn này có nghĩa là
+Cái K của mình nếu mình chọn K
+Bằng giá trị bằng bao nhiêu
+Nó sẽ chọn cho mình K điểm gần nhất
+Cho đó nó tính trung bình cái điểm gần nhất
+Để nó giữ đón kết quả cho new sample của mình
+Còn với giải thật linear Regressions
+Mình chỉ cần map vào trong cái phương trình thẳng
+Để mình tìm được cái giá trị Y được không ưu miễn
+Vì vậy cái vùng tròn đây
+Nếu các bạn chọn K bằng 3
+Cái vùng tròn này nhỏ lại nè
+Tại 3 điểm gần nhất các bạn chọn K bằng
+15 thì vùng tròn lại mở rộng thêm
+Cho đó mình tính trung bình
+Nôm na là
+Có sự sai số
+Khi mình dùng Knen cho bài tỏng Reaction
+Đó là cái mình muốn nhấn mạnh ở đây
+Bây giờ mình sẽ đi tiếp
+Nếu mean của Knen Reaction
+Trước giá trị data tiến tới vô cùng
+Thì nó sẽ tiến về
+linear Reaction
+Cũng chưa chắc
+Trường hợp đó đâu
+Bây giờ mình sẽ đi kế tiếp
+Một cái vấn đề cuối mình ở đây
+Rõ ràng các bạn thấy hiện tại mình đang làm
+Mình đang sử dụng cái giải thật Root Fork có bặt
+Cho nghĩa là ứng với một data mới mình có
+Mình làm gì?
+Mình tính distance đến tất cả những data hiện tại
+Trong cơ sở liệu của mình
+Vì vậy nếu mình có 10, 100
+Thì ok, tính rất là nhanh
+Mình có 1 triệu dữ liệu
+Rõ ràng mỗi lần muốn phân lộ
+Thời gian training mình ít
+Nhưng mà thời gian info quá trời lâu luôn
+Như mô hình supervised learning
+Trước đó linear Reaction các bạn training 5 tiếng
+Mặc là info chỉ mất vài mili giây
+Nhưng mà đó mô hình Knen
+Không cần phải training
+Nhưng mà qua bước info
+Mất mấy phút mới trả về kết quả
+Giống như mình quay lại bài tón
+Bạn sinh viên mà học lực yếu
+Mà lười học
+Vì vậy nếu bạn đó không có chiến lược
+Tìm kiếm tốt
+Mặc dù bây giờ các bạn đó đem 10 viên sách
+Vào trong kỳ thi
+Nhưng bạn đó không có chiến lược tìm kiếm tốt
+Mà bạn đó tìm kiếm phép cạn
+Bây giờ có 10 viên sách
+Thứ nhất là cái viên sách thứ 1 ra
+Tìm kiếm từ đầu đến cuối
+Không có qua viên sách thứ 2
+Tiếm kiếm qua viên sách thứ 3
+Chuyện gì xảy ra nếu mà câu hỏi của bạn đó
+Nằm ở viên sách thứ 10
+Các bạn đó phải tìm kiếm 9 viên sách văn hậu
+Vì vậy nếu chiến thuật tìm kiếm của bạn không hợp lý
+Có thể là các bạn làm được bài
+Nhưng trong 5 câu bạn làm được 1 câu cũng rớt
+Đúng không bạn? Vì vậy
+Các bạn mà lúc nãy mình nói là lazy learning
+Để cho các bạn bá thì các bạn phải có 1 chiến thuật
+Ứm cái câu hỏi đó thì các bạn
+Có thể là chỉ cần phô kết vào trong vùng nào đó
+Để các bạn tìm đúng cái viên sách đó
+Càng nhanh càng tốt
+Chứ không là bạn làm phép cạn là có mua viên sách
+Vô kỳ thi mà ở đó thì cứ ngồi lật từng viên sách ra coi
+Hết thời gian
+Vì vậy mình chỉ làm được 1 câu thôi
+Vì vậy mình sẽ đến với
+1 kai đi nữa là làm thế nào
+Để giúp cho mình giảm cái thời gian
+Mà mình tìm được cái kai nearest neighbor
+Thay vì mình có 1 triệu shambles
+Thay vì mình tính distance
+Đến 1 triệu shambles đó
+Thì có thể mình tính distance đến 50%
+Của tổng số 1 triệu
+Thôi gọi là tính distance của ít hơn 50%
+Vì vậy thì mình sẽ có cái thật
+Được gọi là mình kết hợp cái kai nen này
+Với lại 1 kai D3
+Rồi bây giờ mình sẽ đi vào cái giải thực
+Routfork
+Mình review lại 1 xíu nha
+Đây là dữ liệu mình cho trước các bạn
+Mình có dữ liệu xy nè
+Mình sẽ plot dữ liệu lên 2 chiều
+x bằng 1, y bằng 2, x bằng 2, y bằng 6
+1 bằng 2, 2 bằng 6 mình plot lên
+Vì vậy tổng cộng mình có 6 cái điểm dữ liệu đúng hông
+6 điểm dữ liệu tương ứng
+Mình plot 6 điểm dữ liệu lên
+Mình xem đây là 1 tài xét cho mình cho trước nha
+Rồi bây giờ chuyện gì xảy ra
+Mình có 1 sambo mới đưa vào
+Được hông các bạn
+Mình có 1 sambo mới đưa vào
+Thì bây giờ trong trường hợp này mình cần làm gì các bạn
+Mình cần tính distance từ sambo này đến tất cả
+những sambo còn lại của mình
+Vì vậy lộ ra các bạn phải tính
+tính 6 distance đúng hông các bạn
+Mình đang dùng giải thực là
+Routfork là vết cạn
+Mình phải tính hết tất cả 6 distance này
+Vì vậy lộ ra các bạn thấy
+phương pháp tiếp cận này nó chỉ hợp lý
+khi dữ liệu mình ít thôi
+Thì thật sự các bạn dùng K-NAN nó trả rất là chậm luôn
+K-NAN góp quá ha
+Vì lúc đó họ mới nghĩ ra
+Các nhà nghiên cứu My ra có cách nào đó giúp cho mình
+tăng tốc cái quá trình
+Mục tiêu cuối cùng của mình là không phải mình tính distance
+đến tất cả những
+sambo còn lại của tài xét
+Mục tiêu cuối cùng của mình là mình tìm được
+k sambo gần mình nhất
+Đúng hông các bạn
+Vì mình có 1 triệu sambo trong tập dữ liệu cho trước
+Mình chỉ quan tâm là 3 sambo gần mình nhất
+Và như vậy
+Có cách nào đó mình không cần phải tính distance
+đến 1 triệu sambo mà mình vẫn có thể tìm được
+3 sambo hoặc là 5 sambo gần nhất hay không
+Thì lúc này họ sẽ kết hợp
+thêm cái giải thật được gọi là KD3
+Thì đây là cái giải thật
+về KD3
+Thì đây là khi các bạn đọc tài liệu nghiên cứu
+các thứ hoặc là đọc paper hoặc là sách
+thì họ sẽ đưa ra 1 cái hướng dẫn
+nhìn cái này đọc khá là rối
+đúng hông các bạn nhưng mà thay vì mình
+các bạn nhìn cái này thì bây giờ mình sẽ
+giải thích cho các bạn cái ví dụ
+minh họa trước
+rồi về nhà các bạn quay lại các bạn đọc cái này
+sẽ dễ hơn
+bây giờ dù dù như thế này từng dòng sẽ bắt đầu khá là rối cho các bạn
+bây giờ mình đi vào cái ví dụ để ứng dụng
+KD3
+bây giờ giải thử mình cũng có 1 tập dữ liệu
+là cũng 6 điểm giống như lúc nãy các bạn
+mình có 6 điểm là xy cơ ngưỡng
+thì cái này bây giờ mình đang làm gì
+mình sẽ tổ chức cái đài tài xếp của mình
+để làm sao khi mình tính mình tìm KD3
+nó sẽ nhanh hơn
+so với việc mình tìm cách rét càng
+thì giải thử KD3 thì nó sẽ làm như vầy nha các bạn
+thì nó sẽ cố gắng tổ chức
+dữ liệu của mình thành 1 cái cây
+và từ cái cây đó sẽ hỗ trợ cho mình
+nếu các bạn còn nhớ hôm trước mình tìm hiểu về khái niệm
+về cái việc mà đợi tìm kiếm
+nhanh thì mình sẽ xây dựng cái anh
+By Retrie đúng hông các bạn để giúp cho mình
+tìm kiếm nhanh hơn, tương tự như vậy
+bài tổ của mình cũng là
+tìm kiếm 3 hoặc là 5
+hoặc là 7 cái anh Near neighbor
+thì có cách nào đó mình vận dụng để mình giải quyết
+bài tổ này nhanh hơn hay không
+rồi, đầu tiên họ làm gì
+tại vì rõ ràng cái dữ liệu của mình
+nó sẽ có 2 feature
+x và y, tại vì từng data
+hình dung là nom na là
+input đầu vào của mình nó có 2 feature
+xy, có thể nếu có nhiều hơn sẽ
+xyz là nếu có vector
+thì mỗi data của mình là 1 vector
+có 2 phần tự
+input đầu vào của mình có 2 phần tự
+thì bây giờ để xây dựng cái cây
+đầu tiên các bạn có thể chọn
+bất kỳ feature nào
+các bạn có thể chọn feature x cũng được
+các bạn có thể chọn feature y cũng được
+sau đó các bạn sẽ tìm median
+sau đó các bạn sẽ tách data set của bạn
+thành 2 cái nửa dựa vào việc các bạn
+chọn x hay y
+sau đó các bạn sẽ tiếp tục lập lại bước này
+thì các bạn sẽ xây dựng được cái cây
+nghe có vẻ cũng khá là mơ hò đúng không, bây giờ mình thử mình
+đi của dù vụ thể trên đây dễ ha
+bây giờ mình có xy
+bây giờ giả sử bây giờ mình chọn x
+sau đó mình chọn gấu viên
+có thể có thể chọn y cũng được
+bây giờ giả sử mình chọn gấu viên, mình chọn x
+sau đó mình làm gì các bạn
+trong 6 data points của bạn
+các bạn sẽ sắp lấy tất cả các giá trị x ra
+thì cái x của mình sẽ là
+1, 2, 3, 5, 7
+và 8
+sau đó các bạn sẽ tìm median
+trong hộp này mình sẽ có cái gì các bạn
+mình sẽ tính được median bằng 5
+hôm nay các bạn sẽ thắc mắc là tại sao nó bằng 5
+thông thường nếu mà cái tổng số phần tự của mình là
+số chẳng các bạn thì các bạn sẽ lấy 3
+cộng 5 các bạn chia 2
+có thể median đây các bạn
+xét là mấy các bạn các bạn
+xét là 4, trong hộp này là gì các bạn
+có phải là trong hộp mình sẽ có 2 số này
+để mình lấy 3 cộng 5 chia 2
+lúc này thay vì mình lấy 3 cộng 5 chia 2 để mình được 4
+thì mình sẽ mặc định giả thử của mình
+là mình sẽ chọn cái anh bên phải
+lúc hộp nếu là số chẳng
+thì mình chọn anh bên phải
+lúc này mình sẽ chọn cái 5 là median được không các bạn
+là mình cố tình mình thiết kế trong giả thử của mình luôn
+và thực tế các bạn có thể chuyển cái này thành 4 cũng được
+nhưng mà ở đây mình định nghĩa
+cái giả thử mình tính median của mình
+trong hộp tổng số phần tự là số chẳng
+thì thay vì mình lấy 3 cộng 5 chia 2
+thì mình lấy phần tử bên phải của nó là số 5
+rồi mình xem số 5 là median của
+trường hộp của x này được không các bạn
+rồi mình làm gì
+mình hỏi coi là trong hộp này mình chia như vậy
+nếu mình lấy median mình là 5
+thì lúc này có phải là gì các bạn
+mình chia dữ liệu mình làm 2 nửa 1 nửa bên trái 1 nửa bên phải
+đồng ý không các bạn
+những cái nhỏ hơn x và 1 nửa sau các bạn
+nó sẽ lớn hơn x
+những cái nào mà nhỏ hơn x sau các bạn
+nó sẽ đi bên trái đồng ý không
+như vậy mình sẽ có cái này bên trái
+những cái nào lớn hơn x đi bên phải
+bây giờ mình đi bên nhánh trái trước nha
+bây giờ ở trong cái nhánh
+nửa bên trái này
+đúng không các bạn
+lúc này các bạn thấy là gì
+mình ở đây mình đã chọn được cái anh này là x rồi
+như vậy cái tiếp mình chọn ở đây sẽ là cái y
+được không các bạn
+lúc này mình chọn random gỗng duyên
+mình chọn được x rồi
+như vậy cái nhánh tiếp mình ở đây mình sẽ chọn cái này là y
+mình sẽ chọn cái
+beast the nest feature
+mình chọn x rồi thì cái loại của mình sẽ là y
+lúc này mình sẽ chọn cái y
+tương tự như vậy
+ở bên trái của mình nó sẽ có bao nhiêu sample các bạn
+nó sẽ có 3 sample đúng không
+thì mình lấy y 6, 4 và 2
+rồi tương tự như vậy mình làm gì các bạn
+mình cũng tính median trường hợp này
+median đây là số lẻ nếu như mình lấy được là 4 đó
+lúc này mình sẽ có được median là 4
+thì mình làm gì
+mình chia tiếp dữ liệu bên trái của mình
+mình chia làm 2 nửa đúng không
+1 nửa trên, 1 nửa dưới
+đây là phần nửa lớn hơn 4
+thì là y lớn hơn 4
+còn phần dưới sẽ là y nhỏ hơn 4
+được không các bạn dưới này mình đã trẻ được
+mình sẽ có được cái node chỗ này mình gọi là node số 2
+của data của mình
+tiếp tục mình làm tiếp
+cho khi bên đây các bạn
+tách ra đây
+không có nào mình chia được hơn
+tại vì đây là mình đã kết thúc
+đây còn 1, đây cũng còn 1
+đâu có nào mình đi tiếp đâu
+ở đây mình sẽ tiếp tục đến khi nào
+tất cả các data point của mình đã được chia
+thì ở đây là mình
+còn mỗi anh này là mình đã xong rồi
+có thể là các bạn sẽ tiếp tục làm nửa nếu các bạn có
+và chia nhỏ hơn nữa
+rồi mình sẽ qua được
+xong những bên trái rồi
+mình qua những bên phải được không các bạn
+đây là những bên phải của mình
+8 với lại 3
+thì lúc nãy mình thông nhất rồi
+nếu mà mình có 2 giá trị này thì bên bên phải
+mình sẽ lấy giá trị 8
+lúc này các bạn thấy là gì
+mình sẽ kẽ 1 đường ngang 8 như vậy lúc này các bạn thấy là
+mình sẽ có những cái anh lớn hơn 8
+và anh nhỏ hơn 8
+nhỏ hơn 8 thì mình có 1 anh này
+tiếp tục các bạn thấy là mình có thể
+tiếp tục mình chia
+đến khi nào nhớ được điều kiện dừng của mình
+đến khi nào tất cả các data point
+đều được partition được chia
+ở đây mình chia 4
+có thể các bạn tiếp nữa
+ở đây mình là y
+các bạn sẽ nhảy qua đây các bạn làm tiếp cho cái x
+các bạn có thể chia cho cái x chỗ này
+thì mình sẽ có cái đường x chỗ này
+tương tự bên đây mình có thể chia cho x ở đây
+còn bên đây mình đã
+đi cái đường y đúng không các bạn
+thì ở đây các bạn sẽ tiếp tục các bạn sẽ có được
+cái nhánh x tương ứng ở đây để các bạn chia
+cuối cùng các bạn thấy là khi mình chia
+này xong mình có nửa bên trên và nửa bên dưới
+thì tiếp tục mình sẽ
+tính tiếp
+thì lúc này các bạn thấy là mình sẽ có điều kiện
+để mình rẽ nhánh ở đây để mình đi lại sẽ dễ
+bạn nhìn giúp mình ở đây
+thì đầu tiên có phải là cái 1
+là cái này các bạn
+các bạn sẽ tính median là 5
+các bạn sẽ tách 2 nửa 1 nửa bên phải
+đây là nửa bên trái
+đây là nửa bên phải
+đây là mình đang đi nhánh bên trái
+mình đi qua cái 2
+ứng với nhánh bên trái này các bạn tiếp tục làm gì
+các bạn tìm được cái anh số 2 này
+đây là median theo y
+bắt đầu mình median theo x
+median theo y
+thì mình sẽ tách làm 2 cái
+1 cái nửa trên 1 nửa dưới
+từ cái 2 này các bạn thấy mình làm gì tiếp
+mình lại đi tiếp chỗ này nữa
+mình chọn lại
+từ cái 2 này
+thì các bạn thấy từ cái 2 này
+đây là x đúng không các bạn
+đây sẽ là y
+tiếp tục các bạn sẽ chọn cái x
+lúc này cái x tương ứng các bạn ở đây
+tại vì có 1 anh này
+thì cái này sẽ là giá trị median của anh
+lúc này mình sẽ
+đưa cái giá trị tương ứng ở đây
+mình sẽ có 1 anh 2, 1 anh là 1
+1 cái mình sẽ đi nhánh bên trái
+1 cái mình sẽ đi nhánh bên phải
+lúc này các bạn thấy là mình sẽ tách được
+dữ liệu của mình
+thay vì mình tổ chức
+cách bình thường mình phải làm vết cạn
+thì bây giờ mình sẽ tổ chức theo cái việc
+1 cái cấu trúc cây
+sau khi mình làm theo flow này
+cuối cùng thì các bạn thấy mình sẽ
+xây dựng 1 cái cây giống như vầy
+đây là cái cây mà
+mình tổ chức dữ liệu của mình
+để mình dùng cái này
+bây giờ mình nôm na lại
+từ dữ liệu bắt đầu là
+6 data points
+thì mình sẽ tổ chức lưu trữ theo dạng cây
+như vầy, đầu tiên các bạn thấy là
+nếu x của mình lớn hơn bằng 5
+thì mình sẽ tổ chức
+mình đầu đầu chia
+như nôm na là partition, chia data set
+bây giờ mình sẽ tổ chức theo cấu trúc dạng cây
+nhớ là bắt đầu mình sẽ random ngẫu nhiên
+mình chọn x, hoặc là mình chọn y
+xong đó cái node tiếp thì mình sẽ
+chọn cái net feature của mình
+đây là x, đây là y
+đây là x
+cuối cùng các bạn sẽ xây dựng
+cái cây của các bạn tổng cộng
+sẽ có 6 cái node giống như vầy
+và từ cái node này nó thể hiện
+điều kiện để mình rẻ nhánh
+nếu các bạn xây dựng được cái cây thành công
+các bạn tổ chức được rồi thì lúc này
+xong rồi các bạn sẽ đi theo dữ liệu của mình
+ngay tại cái node cấp của mình
+các bạn thấy là
+partition
+mình chia chỗ này có phải là
+meeting mình đang là
+nâng 5,6
+các bạn thấy cái data point của mình
+xong rồi mình sẽ là 5,6
+rồi tiếp tục các bạn chia
+đi trẻ nhanh bên trái
+thì maintain tiếp theo y của bạn
+sẽ là 3,4
+các bạn đưa 3,4 vào đây
+xong rồi 3,4 các bạn tiếp tục partition
+theo chi tiêu chí x và y thì mình thấy chỗ này là nhỏ hơn
+nhỏ hơn mình sẽ là 1,2 như vậy, nhỏ hơn ở đây
+còn nếu mà lớn hơn mình sẽ đi qua phía bên đây
+như vậy mình sẽ có là 1,2 chỗ đây và mình có 2,6 chỗ này
+tương tự với nhánh bên phải thì mình sẽ có median của y là 7,8
+và tương tự ở đây mình partition tiếp cho trường hợp của x
+thì mình sẽ có tương tự mình có 8,3 ở đây
+Vậy cuối cùng, thay vì mình tổ chức dữ liệu của mình
+và theo cách bình thường thì dữ liệu 6 data points của mình
+thì lúc này các bạn thấy là gì? Mình sẽ được tổ chức theo dạng cây
+giống như vậy
+thì lúc này đó là chính xác nha cái chỗ mà
+cái hàm fit của các bạn thông thường các bạn thấy bây giờ mình chỉ đưa gì
+mình chỉ fit, mình chuyển e-trend, e-trend vào đúng không các bạn
+thì sau này nếu các bạn truyền thiên có tham số vào
+thì nôm nay dữ liệu của các bạn sẽ được tổ chức sẵn
+cái này nó không phải gọi là trend
+mà nó gọi là tổ chức lại dữ liệu của mình
+Lúc nãy một số bạn có dùng cái tờ là mình tổ chức data
+có thể các bạn cũng chưa có rõ lắm
+nhưng mà thông qua cái vụ này các bạn có thể hình dung được là
+khi mình gọi như vậy thì thay vì tổ chức các bình thường
+thì mình thực hiện cái cản khá là lâu, bây giờ nó sẽ tổ chức cho mình thành 1 cái cây
+và từ cái cây đó giúp cho mình query nó tốt hơn
+bây giờ mình ví dụ nha
+bây giờ mình sẽ ví dụ trong trường hợp này
+bây giờ mình giả sử cái data mới của mình đây là điểm màu vàng
+thay vì bình thường lúc nãy các bạn phải làm gì
+các bạn phải tính distance đến hết tất cả
+cái sample này các bạn mới tìm được k-new-rednaver
+bây giờ các bạn làm gì, các bạn chỉ cần xét trước mình thôi
+bây giờ từ đây đến đây nè, đầu tiên mình sẽ tính distance từ
+đây nút góc trước
+bây giờ mình dùng list and distance để các bạn tính được
+cái distance của mình là từ đây này các bạn tính ra
+đây là mực 2 của x-bin cầu cộng cho y-bin
+của e-list written các bạn tính ra được là
+cái 1.41
+ở nút góc nha, 1.41
+và bây giờ cái label hiện tại của mình
+đương nhiên mình sẽ gán cho cái label của mình là
+tại vì nó gần với 5-6 nhất
+thì đương nhiên cái label hiện tại của mình cũng là 5-6
+rồi tiếp tục mình đi tiếp nha, thì lúc này mình mới so sánh nè các bạn
+rồi mình hỏi so sánh coi, tại thời điểm này các bạn sẽ so sánh là gì
+nếu thời điểm này các bạn sẽ rẻ nhánh trái hay nhánh phải
+ngay chỗ 65 các bạn sẽ rẻ nhánh trái hay nhánh phải
+các bạn confirm bằng nhắn giúp mình điều kiện
+đây mình sẽ rẻ nhánh trái hay nhánh phải để mình
+tính cái distance các bạn
+mình sẽ rẻ nhánh vậy các bạn, tại dúc này
+khi mình random ngẫu duyên nó là x
+thì chỗ này sẽ là hình của x nên như vậy
+6 nó sẽ lớn hơn median, chỗ này là 5, như vậy nó sẽ đi nhánh phải
+như vậy có phải là các bạn tiết kiệm được cái thời gian
+các bạn tính distance đến 3 nó bên này không
+các bạn thấy không, mình sẽ tiết kiệm được thời gian
+lúc này là cái gì, mình chỉ cần tính distance từ đây đến đây
+được hả các bạn
+rồi sau khi mình sẽ tính được cái distance từ đây đến đây
+rồi có thể là các bạn sẽ tính tiếp được cái distance từ đây đến đây
+nên là mình đi, mình rẻ những cái phía nhánh ở bên phải thôi
+như vậy lúc này các bạn thấy là gì
+mình sẽ tiết kiệm được thời gian để mình tính
+mình sẽ không phải tính distance hết tất cả dữ liệu của mình
+mà dựa vào con trúc cây này, mình rẻ nhánh và mình chỉ biết mình focus vào
+như các bạn thấy ở đây nhìn cái visualization trực quan
+nếu mình có 1 data point thì rõ ràng
+mình thái lại cái gì các bạn, nó sẽ gần với những cái này hơn
+đồng ý hơn các bạn, như vậy mình chỉ cần tìm kiếm trong cái vùng này là đủ rồi
+mình không cần nhất thiết, mình phải đẩy qua những cái vùng lân cận
+khá là xa đúng không các bạn, như vậy thông qua cái việc tổ chức dữ liệu của các bạn
+như vậy thì nó giúp cho các bạn giảm được thời gian
+mà mình tính distance đến những sample không cần thiết
+đó là cái idea của K-new rich neighbor khá là hay
+thì các bạn nói là quá trình chia nhánh này có lâu dù
+phải xét đến 6 điểm
+đương nhiên là nó lâu nhưng mà nó vẫn nhanh hơn trường hợp quét cạn
+tại vì mình thực hình Domna là bây giờ
+nếu mình thực hiện quét cạn là ứng 1 sample người dùng đưa vào
+mình phải tính 1 triệu distance, nếu mình có 1 triệu sample
+1 sample khác thì các bạn phải tính 1 triệu distance
+1 sample khác các bạn cũng phải tính 1 triệu distance
+chuyện gì xảy ra nếu mình xây dựng sẵn 1 cái cây như vậy
+thì sẽ giảm được thời gian xử lý khá là nhiều ở giai đoạn mình inform
+tức là giai đoạn mình tìm ra kết quả
+sẽ tới o khá là nhiều so với trường hợp quét cạn
+đó là 1 cái lưu ý các bạn trong trường hợp này
+nghĩa là nó chạy từ 8.3 lên
+bây giờ ví dụ trong trường hợp này
+mình ví dụ ở đây cho các bạn dễ hành dung nha
+bây giờ giả sử mình xét khay bằng 1 đi các bạn
+mình xét khay bằng 1 đi
+có nghĩa là các bạn tìm giúp mình các anh gần nhất với lại anh 6.5
+thì bây giờ nếu mà nhìn hình của mình
+thì các bạn thấy các anh gần nhất của mình sẽ là anh mấy các bạn
+nhìn hình đây thôi, anh gần nhất mình là anh mấy các bạn
+nếu mà anh gần nhất của mình sẽ là anh mấy các bạn
+anh 5.6 đúng không?
+vậy nhiệm vụ của mình là làm thế nào để mình tìm 5.6 mà ít bước tính nhất có thể
+ít bước tính distance nhất có thể
+bình thường nếu các bạn thấy là mình phải là tính hết 6 lần
+rồi mình chọn anh gần nhất, anh nhỏ nhất đúng không?
+bây giờ mình làm gì?
+6.5 mình đi đến nút góc thôi, mình tính distance
+distance đó là 1.41
+bây giờ cái anh gần nhất của mình là anh 5.6 đúng không?
+nhưng mà mình chưa biết chắc anh gần nhất đúng không?
+bây giờ mình đi tiếp kem cái cây của mình
+mình sẽ đi qua nhánh bên phải
+rồi bây giờ mình đồng mình việc
+bây giờ mình tính distance từ 6.5 đến 7.8
+từ 6.5 đến 7.8
+thì hôm nay mình trả về distance của mình là 3.16
+mà cái tốt nhất của mình bây giờ 1.41
+tại vì nó gần với anh này hơn mà
+như vậy mình sẽ không, mình sẽ có cần update lại các bạn
+lúc này mình có cần update lại, như vậy mình sẽ không cần update lại cái best distance tương ứng của mình
+tại vì anh này vẫn là anh nhỏ nhất rồi
+còn anh này vẫn lớn hơn
+như vậy mình vẫn giữ cái anh 5.6 là cái anh tốt nhất
+rồi tương tự mình sẽ đi tiếp xuống nhánh bên đây
+mình sẽ đi tiếp xuống đây
+thì rõ ràng từ đây đến đây, rõ ràng các bạn thấy cái distance tương ứng
+từ đây đến đây, đến cái 8.3 của mình
+thì distance đó là 2.82
+thì nó vẫn sao các bạn?
+nó vẫn lớn hơn so với cái best distance của mình
+tại mình đang cố gắng mình tìm cái anh gần mình nhất mình
+mà khai băng lần 1 nữa các bạn
+được không hả?
+các bạn thấy là sau khi việc hết nhánh này
+các bạn thấy mình sẽ cần tốn
+bao nhiêu cái cần tính distance để mình tìm được cái
+cái anh nhỏ nhỏ distance gần mình nhất là khai băng 1
+mình cần mấy lần tính distance các bạn
+trong quý dụ này
+nếu mình apply theo cái KD tree này thì mình cần
+bao nhiêu lần tính distance các bạn
+mình cần 6 hay là cần 3 các bạn
+mình chỉ cần 3 lần thôi
+các bạn thấy là khá hiệu quả
+như vậy có thể giảm thiệu rất nhiều thời gian để mình tính distance trong trường hợp này
+đó là cái ví dụ của mình
+cái hiệu quả của việc mình tổ chức theo cái KD tree
+thì ở đây mình cũng đưa ra mỗi code để ví dụ cho các bạn luôn
+thì ở đây là cái việc mình sử dụng cái KD tree này các bạn
+các bạn có thể sử dụng cái này để mình ví dụ thêm cho các bạn
+thì cái topic về KD tree là cái mình muốn thảo luận sau với các bạn
+tự nhiên nếu mình dừng ở cái mức khenen cơ bản là ok rồi
+nhưng mà nếu mình dùng thực tế thì các bạn thấy khá là chậm
+thì phải có cách nào đó để mình có thể speed up tăng tấp quá trình này lên
+bằng cách mình tổ chức dữ liệu của mình theo một dạng K
+và từ đó giúp cho mình tìm kiếm cái K-nearish neighbor
+nó nhanh hơn rất là nhiều so với cái việc mình sử dụng rootfork
+thì ở đây mình cũng chia sẻ các bạn có thể so sánh cái bờ phân mình chỗ này giúp mình thôi
+ở đây nếu mình sử dụng cái rootfork
+thì các bạn chiên như mình giải thật footfork và early strength distance tương ứng nha
+còn nếu các bạn muốn sử dụng cái KD3 ở đây
+thì các bạn có thể sử dụng thêm giúp mình cái trường hợp mình mở động dụng cái KD3 ở đây
+thì các bạn có thể đọc thêm cái code mình chia sẻ cho các bạn nha
+phần này có như là một phần mở động thêm để giúp cho các bạn hình dung là
+ngoài cái việc mình sử dụng khenen truyền thống thì mình có thể tích hợp thêm cái KD3
+để giúp cho mình tăng tốc cái quá trình mình tìm cái K-nearish neighbor tốt hơn
+nếu khay bằng 4 thì mình phải bỏ đi cái 3-4
+trong trường hợp này nếu mà khay của mình bằng ngọt thì mình tìm điểm này gần nhất đúng không bạn
+còn liên nhiên lúc mà khay của mình là bằng 4 thì mình cũng làm tương tự như vậy thôi
+tại vì nếu mình cố gắng tìm khay bằng 4 là 4 cái node gần nhất đúng không bạn
+thì các bạn cứ làm tương tự thôi từ đây đến đây thì mình sẽ có cái gần nhất mình lưu trữ lại
+từ đây thì các bạn cứ tìm đến khi nào mà các bạn tìm được 4 cái gần nhất thì các bạn dừng lại
+dừng gia thật của mình làm, giống như ở đây các bạn thấy nè
+mình tìm được cái anh đây, anh đây, anh đây đúng không bạn
+hợp nếu khay bằng 3 là ok rồi, hợp nếu mà khay bằng 4 thì các bạn sẽ mở rộng qua đi bên nhánh này
+tại vì cố gắng các bạn tìm khay bằng 4 mà khay bằng 3 nè
+đi hết những bên này các bạn đã tìm được đủ khay rồi các bạn có thể mở tiếp bên đây để các bạn tìm tiếp
+nếu mà đụng khay bằng 4 thì các bạn dừng và không cần phải đi tiếp 2 anh còn lại ở đây
+không cần phải đi tiếp xuống cái 2 anh dưới đây, như vậy nó vẫn tiết kiệm được thời gian cho mình nữa
+rồi bây giờ mình sẽ tiếp tục
+ok chắc là mình sẽ dừng ở đây 5 phút cho các bạn đi dễ lai
+rồi mình sẽ quay lại mình làm vài câu hỏi trắc nghiệm để mình kết thúc buổi hôm nay
+sau đó nếu các bạn có câu hỏi thì các bạn cứ đặt thêm cho mình nên mình sẽ trao đổi
+thật sự khenen nếu mình mở rộng ra cũng là bài tón khá là hay các bạn
+còn nếu mình chỉ dừng ở cái mức độ khenen cơ bản thì cái ID nó cũng đơn giản nha
+có dữ liệu mới thì tính distance dữ liệu đó đến tất cả những cái dữ liệu mình có trước
+rồi tìm khenen gần nhất, rồi dựa bằng khenen gần nhất, rồi dựa bằng khenen gần nhất
+rồi tìm khenen gần nhất, rồi dựa vào khenen đó để phân loại mình là cái gì
+hoặc là dựa vào khenen gần nhất đó để dự đón xem cái output đầu ra của mình trong đường hợp regression là gì
+bằng cách mình tính trung bình hoặc là mình dùng các thông thức khác để mình tính nha
+rồi thì đương nhiên sau này các bạn thấy là mục tiêu của mình là có phải là cái việc mình tìm kiếm khenen nearest neighbor của mình
+là cái việc mình diệt cái cây đó các bạn, nhưng mà nếu mình tổ chức được cái cây
+thì lúc này mình sẽ tốn, mình sẽ giảm được thời gian để mình sort
+các bạn có thể ước dụng một các giới thuật là depth first search, breadth first search vào các bạn có thể ước dụng được hết nha
+tại vì có cái cây rồi, mục tiêu của mình là mình hãy cố gắng mình tìm, mình tìm cái khenen gần nhất của mình
+cái khenen nearest neighbor gần nhất nha
+thì từng sau các bạn sẽ gặp lại mô hình về decision tree
+lúc đó các bạn sẽ thấy cái bức tranh về cây khá là thú vị
+có nghĩa là làm thế nào từ một dữ liệu mình build thành một cái cây
+thì hôm trước mình đã đưa cho các bạn ví dụ là từ dữ liệu mình dùng thư viện để ra cái cây
+thì từng sau mình sẽ tìm hiểu làm thế nào để xây dựng được cái cây từ đầu đến cuối luôn
+như bữa hôm nay cái cây tree là một cái cây đơn giản thôi các bạn
+từng sau mình sẽ xây dựng một cái cây phức tạo hình khá là nhiều bằng sử dụng các kỹ số khác nữa
+thì các bạn giả lau giúp mình khoảng khoảng 5 phút đi
+mình sẽ quay lại, trong lúc đó mình sẽ setup cái ca hút cho các bạn
+hôm nay cái dữ liệu của mình không phải mình train
+có nghĩa là mình tổ chức lại dữ liệu như lúc nãy mình nói
+là mình có thể tổ chức lại data của mình theo một dạng cây hoặc là một cấu trúc nào đó
+để giúp cho mình trì quấn nó tốt hơn chứ không phải mình train
+thì mục tiêu của mình mình nhấn mạnh ở chỗ là cái hầm fit của mình lúc nãy mình gọi trong KNN
+là mình không phải là cái việc mình huấn luyện mô hình giống như mô hình linear reaction
+cái việc là mình tổ chức dữ liệu và cái việc mình tổ chức dữ liệu theo dạng cây
+giống như nãy mình nói cũng là một cái mình có thể đưa vào trong cái hầm fit rồi đó
+thì có thể các bạn có nhiều cách khác để tổ chức dữ liệu nha
+đây mình ví dụ là cái đồng hợp mình dùng KD tree thôi
+có thể mình tích hợp nhiều cái idea khác vào trong cái KNN
+mục tiêu chính của mình là phải tăng tốc cái quá trình mà tìm K nearest neighbor
+thay vì phải dùng cái chiến lược thực vét cạn nha các bạn
+rồi lúc đó thì mình sẽ share cái chaos cho các bạn nha
+để mình share môn hình cho các bạn
+].
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Các bạn hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
+Cảm ơn mọi người.
+Hãy đăng ký kênh để ủng hộ kênh của mình để nhận ra những video mới nhất.
