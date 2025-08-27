@@ -109,6 +109,7 @@ python whisper/whisper_script.py "localignore" \
 - **Flexible chunking**: Configurable segment duration
 - **Organized output**: Separate directories for chunks and transcriptions
 - **Command-line interface**: Easy to use with various options
+- **Slide change detection**: Detect PowerPoint slide changes in video recordings (planned feature)
 
 ## Troubleshooting
 
@@ -124,6 +125,40 @@ python whisper/whisper_script.py "localignore" \
 - Use GPU (`--device cuda`) for faster transcription
 - Use smaller models for faster processing (trade-off with accuracy)
 - Process files in smaller batches if memory is limited
+
+## Slide Change Detection (Planned Feature)
+
+### Overview
+A Python script using OpenCV to detect PowerPoint slide changes in lecture video recordings. This feature will work alongside the existing transcription pipeline to create comprehensive study materials.
+
+### Technical Approach
+- **Primary Detection**: Frame difference analysis using Structural Similarity Index (SSIM)
+- **Secondary Validation**: Template matching with exported JPG slides (when available)
+- **Fallback Method**: Histogram comparison for quick filtering
+- **Processing Strategy**: Batch processing for memory efficiency on long videos
+
+### Detection Sensitivity Options
+1. **High Granularity** (1-2 seconds): Catches all changes, slower processing
+2. **Balanced** (5-10 seconds): Good balance of speed and accuracy
+3. **Major Transitions Only**: Fastest, detects only new slides
+
+### Output Format
+JSON file containing:
+- Timestamp in HH:MM:SS format
+- Sequential slide number
+- Simple change description (e.g., "Slide 1", "Slide 2")
+
+### Use Cases
+- Long lecture videos (3+ hours)
+- PowerPoint-based presentations
+- Creating study materials with synchronized content
+- Combining slide changes with transcription timestamps
+
+### Implementation Notes
+- Requires OpenCV and additional dependencies
+- Supports FullHD video input
+- Optimized for image-heavy slides
+- Template matching requires JPG export of PowerPoint slides
 
 ## License
 
