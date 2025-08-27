@@ -1,4 +1,4 @@
 # Slide Detection Dependencies
 opencv-python>=4.8.0
 numpy>=1.24.0
-scikit-image>=0.20.0  # For SSIM calculation if OpenCV SSIM is not available
+scikit-image>=0.20.0  # Required for SSIM calculation
