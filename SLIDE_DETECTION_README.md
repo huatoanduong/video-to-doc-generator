@@ -35,6 +35,15 @@ python -c "import cv2; print(f'OpenCV version: {cv2.__version__}')"
 
 ## Usage
 
+### Available Scripts
+
+The slide detection system includes several scripts for different purposes:
+
+- **`slide_detector.py`** - Main script for detecting slide changes in videos
+- **`test_installation.py`** - Test script to verify all dependencies are working
+- **`example_usage.py`** - Examples of how to use the detector programmatically
+- **`requirements_slide_detection.txt`** - Dependencies file for the slide detection feature
+
 ### Command Line Interface
 
 #### Basic Usage
@@ -84,6 +93,26 @@ detector.print_summary()
 # Access results
 for change in slide_changes:
     print(f"Slide {change['slide_number']} at {change['timestamp']}")
+```
+
+### Testing and Examples
+
+#### Test Installation
+```bash
+# Run comprehensive dependency test
+python test_installation.py
+```
+
+#### Run Examples
+```bash
+# See programmatic usage examples
+python example_usage.py
+```
+
+#### Quick Start Test
+```bash
+# Test with a small video first
+python slide_detector.py "test_video.mp4" --sensitivity high --verbose
 ```
 
 ## Output Format
@@ -222,6 +251,15 @@ The script generates a JSON file with the following structure:
    python slide_detector.py "video.mp4" --frame-interval 15
    ```
 
+5. **Script Import Errors**
+   ```bash
+   # Test all dependencies first
+   python test_installation.py
+   
+   # Check Python path and working directory
+   python -c "import sys; print(sys.path)"
+   ```
+
 ### Debug Mode
 
 Enable verbose logging for detailed analysis:
@@ -231,6 +269,20 @@ python slide_detector.py "video.mp4" --verbose
 ```
 
 This will create a `slide_detection.log` file with detailed processing information.
+
+## Project Structure
+
+```
+video-to-doc-generator/
+├── slide_detector.py              # Main slide detection script
+├── test_installation.py           # Dependency testing script
+├── example_usage.py               # Usage examples
+├── requirements_slide_detection.txt # Slide detection dependencies
+├── SLIDE_DETECTION_README.md      # This documentation file
+├── whisper/                       # Existing transcription pipeline
+│   └── whisper_script.py
+└── README.md                      # Main project documentation
+```
 
 ## Integration with Transcription Pipeline
 
@@ -283,6 +335,31 @@ python slide_detector.py "long_lecture.mp4" \
     --output "quick_slides.json"
 ```
 
+## Quick Reference
+
+### Essential Commands
+```bash
+# Test everything works
+python test_installation.py
+
+# Basic slide detection
+python slide_detector.py "video.mp4"
+
+# High accuracy detection
+python slide_detector.py "video.mp4" --sensitivity high --verbose
+
+# Fast processing for long videos
+python slide_detector.py "video.mp4" --sensitivity low --frame-interval 10
+
+# See examples
+python example_usage.py
+```
+
+### File Outputs
+- **JSON**: `{video_name}_slide_changes.json` - Main results
+- **Log**: `slide_detection.log` - Detailed processing log
+- **Console**: Real-time progress and summary
+
 ## Support
 
 For issues and questions:
@@ -290,6 +367,7 @@ For issues and questions:
 2. Enable verbose logging with `--verbose`
 3. Review the `slide_detection.log` file
 4. Check OpenCV and dependency versions
+5. Run `python test_installation.py` to verify setup
 
 ## License
 
