@@ -31,6 +31,11 @@ pip install -r requirements.txt
 ffmpeg -i filename.mp4 filename.mp3
 ```
 
+### Convert video to 10 FPS for better slide detection performance
+```
+ffmpeg -i input.mp4 -vf "fps=fps=10" output_10fps.mp4
+```
+
 ### Split a mp3 file into chunks
 ```
 ffmpeg -i "path/to/mp3" -c copy -map 0 -segment_time 00:10:00 -f segment output%03d.mp3
@@ -159,6 +164,7 @@ JSON file containing:
 - Supports FullHD video input
 - Optimized for image-heavy slides
 - Template matching requires JPG export of PowerPoint slides
+- **Performance Tip**: Convert videos to 10 FPS using `ffmpeg -i input.mp4 -vf "fps=fps=10" output_10fps.mp4` for faster processing
 
 ## License
 
