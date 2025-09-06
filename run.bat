@@ -1,0 +1,1 @@
+python ./slide-detector/slide_detector.py  --histogram-threshold 0.2 --ssim-threshold 0.6 --frame-interval 1 --verbose "./localignore/M03W02 - K Nearest Neighbor (KNN)_1fps.mp4"

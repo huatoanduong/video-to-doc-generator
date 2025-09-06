@@ -58,7 +58,7 @@ def main():
         sensitivity="balanced",
         ssim_threshold=0.80,      # More lenient SSIM
         histogram_threshold=0.25,  # More lenient histogram
-        frame_interval=3           # Process more frames
+        frame_interval=1           # Process more frames
     )
 
     print(f"Custom detector initialized with:")

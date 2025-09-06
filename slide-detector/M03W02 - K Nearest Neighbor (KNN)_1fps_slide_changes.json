@@ -1,0 +1,715 @@
+{
+  "detection_info": {
+    "sensitivity": "low",
+    "ssim_threshold": 0.8,
+    "histogram_threshold": 0.2,
+    "frame_interval": 10,
+    "detection_date": "2025-08-27T23:19:01.732493"
+  },
+  "slide_changes": [
+    {
+      "timestamp": "00:16:10",
+      "timestamp_seconds": 970.0,
+      "frame_number": 970,
+      "slide_number": 1,
+      "description": "Slide 1"
+    },
+    {
+      "timestamp": "00:16:50",
+      "timestamp_seconds": 1010.0,
+      "frame_number": 1010,
+      "slide_number": 2,
+      "description": "Slide 2"
+    },
+    {
+      "timestamp": "00:17:40",
+      "timestamp_seconds": 1060.0,
+      "frame_number": 1060,
+      "slide_number": 3,
+      "description": "Slide 3"
+    },
+    {
+      "timestamp": "00:20:00",
+      "timestamp_seconds": 1200.0,
+      "frame_number": 1200,
+      "slide_number": 4,
+      "description": "Slide 4"
+    },
+    {
+      "timestamp": "00:23:20",
+      "timestamp_seconds": 1400.0,
+      "frame_number": 1400,
+      "slide_number": 5,
+      "description": "Slide 5"
+    },
+    {
+      "timestamp": "00:30:10",
+      "timestamp_seconds": 1810.0,
+      "frame_number": 1810,
+      "slide_number": 6,
+      "description": "Slide 6"
+    },
+    {
+      "timestamp": "00:30:20",
+      "timestamp_seconds": 1820.0,
+      "frame_number": 1820,
+      "slide_number": 7,
+      "description": "Slide 7"
+    },
+    {
+      "timestamp": "00:30:30",
+      "timestamp_seconds": 1830.0,
+      "frame_number": 1830,
+      "slide_number": 8,
+      "description": "Slide 8"
+    },
+    {
+      "timestamp": "00:32:50",
+      "timestamp_seconds": 1970.0,
+      "frame_number": 1970,
+      "slide_number": 9,
+      "description": "Slide 9"
+    },
+    {
+      "timestamp": "00:34:30",
+      "timestamp_seconds": 2070.0,
+      "frame_number": 2070,
+      "slide_number": 10,
+      "description": "Slide 10"
+    },
+    {
+      "timestamp": "00:34:40",
+      "timestamp_seconds": 2080.0,
+      "frame_number": 2080,
+      "slide_number": 11,
+      "description": "Slide 11"
+    },
+    {
+      "timestamp": "00:37:30",
+      "timestamp_seconds": 2250.0,
+      "frame_number": 2250,
+      "slide_number": 12,
+      "description": "Slide 12"
+    },
+    {
+      "timestamp": "00:43:20",
+      "timestamp_seconds": 2600.0,
+      "frame_number": 2600,
+      "slide_number": 13,
+      "description": "Slide 13"
+    },
+    {
+      "timestamp": "00:43:30",
+      "timestamp_seconds": 2610.0,
+      "frame_number": 2610,
+      "slide_number": 14,
+      "description": "Slide 14"
+    },
+    {
+      "timestamp": "00:43:40",
+      "timestamp_seconds": 2620.0,
+      "frame_number": 2620,
+      "slide_number": 15,
+      "description": "Slide 15"
+    },
+    {
+      "timestamp": "00:44:10",
+      "timestamp_seconds": 2650.0,
+      "frame_number": 2650,
+      "slide_number": 16,
+      "description": "Slide 16"
+    },
+    {
+      "timestamp": "00:46:20",
+      "timestamp_seconds": 2780.0,
+      "frame_number": 2780,
+      "slide_number": 17,
+      "description": "Slide 17"
+    },
+    {
+      "timestamp": "00:55:10",
+      "timestamp_seconds": 3310.0,
+      "frame_number": 3310,
+      "slide_number": 18,
+      "description": "Slide 18"
+    },
+    {
+      "timestamp": "00:59:10",
+      "timestamp_seconds": 3550.0,
+      "frame_number": 3550,
+      "slide_number": 19,
+      "description": "Slide 19"
+    },
+    {
+      "timestamp": "01:01:30",
+      "timestamp_seconds": 3690.0,
+      "frame_number": 3690,
+      "slide_number": 20,
+      "description": "Slide 20"
+    },
+    {
+      "timestamp": "01:02:30",
+      "timestamp_seconds": 3750.0,
+      "frame_number": 3750,
+      "slide_number": 21,
+      "description": "Slide 21"
+    },
+    {
+      "timestamp": "01:10:30",
+      "timestamp_seconds": 4230.0,
+      "frame_number": 4230,
+      "slide_number": 22,
+      "description": "Slide 22"
+    },
+    {
+      "timestamp": "01:11:10",
+      "timestamp_seconds": 4270.0,
+      "frame_number": 4270,
+      "slide_number": 23,
+      "description": "Slide 23"
+    },
+    {
+      "timestamp": "01:13:00",
+      "timestamp_seconds": 4380.0,
+      "frame_number": 4380,
+      "slide_number": 24,
+      "description": "Slide 24"
+    },
+    {
+      "timestamp": "01:13:10",
+      "timestamp_seconds": 4390.0,
+      "frame_number": 4390,
+      "slide_number": 25,
+      "description": "Slide 25"
+    },
+    {
+      "timestamp": "01:17:40",
+      "timestamp_seconds": 4660.0,
+      "frame_number": 4660,
+      "slide_number": 26,
+      "description": "Slide 26"
+    },
+    {
+      "timestamp": "01:19:10",
+      "timestamp_seconds": 4750.0,
+      "frame_number": 4750,
+      "slide_number": 27,
+      "description": "Slide 27"
+    },
+    {
+      "timestamp": "01:19:30",
+      "timestamp_seconds": 4770.0,
+      "frame_number": 4770,
+      "slide_number": 28,
+      "description": "Slide 28"
+    },
+    {
+      "timestamp": "01:20:00",
+      "timestamp_seconds": 4800.0,
+      "frame_number": 4800,
+      "slide_number": 29,
+      "description": "Slide 29"
+    },
+    {
+      "timestamp": "01:21:10",
+      "timestamp_seconds": 4870.0,
+      "frame_number": 4870,
+      "slide_number": 30,
+      "description": "Slide 30"
+    },
+    {
+      "timestamp": "01:21:20",
+      "timestamp_seconds": 4880.0,
+      "frame_number": 4880,
+      "slide_number": 31,
+      "description": "Slide 31"
+    },
+    {
+      "timestamp": "01:21:40",
+      "timestamp_seconds": 4900.0,
+      "frame_number": 4900,
+      "slide_number": 32,
+      "description": "Slide 32"
+    },
+    {
+      "timestamp": "01:22:30",
+      "timestamp_seconds": 4950.0,
+      "frame_number": 4950,
+      "slide_number": 33,
+      "description": "Slide 33"
+    },
+    {
+      "timestamp": "01:22:40",
+      "timestamp_seconds": 4960.0,
+      "frame_number": 4960,
+      "slide_number": 34,
+      "description": "Slide 34"
+    },
+    {
+      "timestamp": "01:27:10",
+      "timestamp_seconds": 5230.0,
+      "frame_number": 5230,
+      "slide_number": 35,
+      "description": "Slide 35"
+    },
+    {
+      "timestamp": "01:27:20",
+      "timestamp_seconds": 5240.0,
+      "frame_number": 5240,
+      "slide_number": 36,
+      "description": "Slide 36"
+    },
+    {
+      "timestamp": "01:27:30",
+      "timestamp_seconds": 5250.0,
+      "frame_number": 5250,
+      "slide_number": 37,
+      "description": "Slide 37"
+    },
+    {
+      "timestamp": "01:27:40",
+      "timestamp_seconds": 5260.0,
+      "frame_number": 5260,
+      "slide_number": 38,
+      "description": "Slide 38"
+    },
+    {
+      "timestamp": "01:29:20",
+      "timestamp_seconds": 5360.0,
+      "frame_number": 5360,
+      "slide_number": 39,
+      "description": "Slide 39"
+    },
+    {
+      "timestamp": "01:29:30",
+      "timestamp_seconds": 5370.0,
+      "frame_number": 5370,
+      "slide_number": 40,
+      "description": "Slide 40"
+    },
+    {
+      "timestamp": "01:30:30",
+      "timestamp_seconds": 5430.0,
+      "frame_number": 5430,
+      "slide_number": 41,
+      "description": "Slide 41"
+    },
+    {
+      "timestamp": "01:31:10",
+      "timestamp_seconds": 5470.0,
+      "frame_number": 5470,
+      "slide_number": 42,
+      "description": "Slide 42"
+    },
+    {
+      "timestamp": "01:32:50",
+      "timestamp_seconds": 5570.0,
+      "frame_number": 5570,
+      "slide_number": 43,
+      "description": "Slide 43"
+    },
+    {
+      "timestamp": "01:34:50",
+      "timestamp_seconds": 5690.0,
+      "frame_number": 5690,
+      "slide_number": 44,
+      "description": "Slide 44"
+    },
+    {
+      "timestamp": "01:38:00",
+      "timestamp_seconds": 5880.0,
+      "frame_number": 5880,
+      "slide_number": 45,
+      "description": "Slide 45"
+    },
+    {
+      "timestamp": "01:42:30",
+      "timestamp_seconds": 6150.0,
+      "frame_number": 6150,
+      "slide_number": 46,
+      "description": "Slide 46"
+    },
+    {
+      "timestamp": "01:58:10",
+      "timestamp_seconds": 7090.0,
+      "frame_number": 7090,
+      "slide_number": 47,
+      "description": "Slide 47"
+    },
+    {
+      "timestamp": "01:58:20",
+      "timestamp_seconds": 7100.0,
+      "frame_number": 7100,
+      "slide_number": 48,
+      "description": "Slide 48"
+    },
+    {
+      "timestamp": "02:05:50",
+      "timestamp_seconds": 7550.0,
+      "frame_number": 7550,
+      "slide_number": 49,
+      "description": "Slide 49"
+    },
+    {
+      "timestamp": "02:06:40",
+      "timestamp_seconds": 7600.0,
+      "frame_number": 7600,
+      "slide_number": 50,
+      "description": "Slide 50"
+    },
+    {
+      "timestamp": "02:06:50",
+      "timestamp_seconds": 7610.0,
+      "frame_number": 7610,
+      "slide_number": 51,
+      "description": "Slide 51"
+    },
+    {
+      "timestamp": "02:19:30",
+      "timestamp_seconds": 8370.0,
+      "frame_number": 8370,
+      "slide_number": 52,
+      "description": "Slide 52"
+    },
+    {
+      "timestamp": "02:25:00",
+      "timestamp_seconds": 8700.0,
+      "frame_number": 8700,
+      "slide_number": 53,
+      "description": "Slide 53"
+    },
+    {
+      "timestamp": "02:29:00",
+      "timestamp_seconds": 8940.0,
+      "frame_number": 8940,
+      "slide_number": 54,
+      "description": "Slide 54"
+    },
+    {
+      "timestamp": "02:30:20",
+      "timestamp_seconds": 9020.0,
+      "frame_number": 9020,
+      "slide_number": 55,
+      "description": "Slide 55"
+    },
+    {
+      "timestamp": "02:30:30",
+      "timestamp_seconds": 9030.0,
+      "frame_number": 9030,
+      "slide_number": 56,
+      "description": "Slide 56"
+    },
+    {
+      "timestamp": "02:41:20",
+      "timestamp_seconds": 9680.0,
+      "frame_number": 9680,
+      "slide_number": 57,
+      "description": "Slide 57"
+    },
+    {
+      "timestamp": "02:41:40",
+      "timestamp_seconds": 9700.0,
+      "frame_number": 9700,
+      "slide_number": 58,
+      "description": "Slide 58"
+    },
+    {
+      "timestamp": "02:48:40",
+      "timestamp_seconds": 10120.0,
+      "frame_number": 10120,
+      "slide_number": 59,
+      "description": "Slide 59"
+    },
+    {
+      "timestamp": "02:51:10",
+      "timestamp_seconds": 10270.0,
+      "frame_number": 10270,
+      "slide_number": 60,
+      "description": "Slide 60"
+    },
+    {
+      "timestamp": "02:52:40",
+      "timestamp_seconds": 10360.0,
+      "frame_number": 10360,
+      "slide_number": 61,
+      "description": "Slide 61"
+    },
+    {
+      "timestamp": "02:53:10",
+      "timestamp_seconds": 10390.0,
+      "frame_number": 10390,
+      "slide_number": 62,
+      "description": "Slide 62"
+    },
+    {
+      "timestamp": "02:58:20",
+      "timestamp_seconds": 10700.0,
+      "frame_number": 10700,
+      "slide_number": 63,
+      "description": "Slide 63"
+    },
+    {
+      "timestamp": "02:58:30",
+      "timestamp_seconds": 10710.0,
+      "frame_number": 10710,
+      "slide_number": 64,
+      "description": "Slide 64"
+    },
+    {
+      "timestamp": "02:58:50",
+      "timestamp_seconds": 10730.0,
+      "frame_number": 10730,
+      "slide_number": 65,
+      "description": "Slide 65"
+    },
+    {
+      "timestamp": "03:09:00",
+      "timestamp_seconds": 11340.0,
+      "frame_number": 11340,
+      "slide_number": 66,
+      "description": "Slide 66"
+    },
+    {
+      "timestamp": "03:10:10",
+      "timestamp_seconds": 11410.0,
+      "frame_number": 11410,
+      "slide_number": 67,
+      "description": "Slide 67"
+    },
+    {
+      "timestamp": "03:11:20",
+      "timestamp_seconds": 11480.0,
+      "frame_number": 11480,
+      "slide_number": 68,
+      "description": "Slide 68"
+    },
+    {
+      "timestamp": "03:12:00",
+      "timestamp_seconds": 11520.0,
+      "frame_number": 11520,
+      "slide_number": 69,
+      "description": "Slide 69"
+    },
+    {
+      "timestamp": "03:16:10",
+      "timestamp_seconds": 11770.0,
+      "frame_number": 11770,
+      "slide_number": 70,
+      "description": "Slide 70"
+    },
+    {
+      "timestamp": "03:16:30",
+      "timestamp_seconds": 11790.0,
+      "frame_number": 11790,
+      "slide_number": 71,
+      "description": "Slide 71"
+    },
+    {
+      "timestamp": "03:16:40",
+      "timestamp_seconds": 11800.0,
+      "frame_number": 11800,
+      "slide_number": 72,
+      "description": "Slide 72"
+    },
+    {
+      "timestamp": "03:16:50",
+      "timestamp_seconds": 11810.0,
+      "frame_number": 11810,
+      "slide_number": 73,
+      "description": "Slide 73"
+    },
+    {
+      "timestamp": "03:17:00",
+      "timestamp_seconds": 11820.0,
+      "frame_number": 11820,
+      "slide_number": 74,
+      "description": "Slide 74"
+    },
+    {
+      "timestamp": "03:17:30",
+      "timestamp_seconds": 11850.0,
+      "frame_number": 11850,
+      "slide_number": 75,
+      "description": "Slide 75"
+    },
+    {
+      "timestamp": "03:17:40",
+      "timestamp_seconds": 11860.0,
+      "frame_number": 11860,
+      "slide_number": 76,
+      "description": "Slide 76"
+    },
+    {
+      "timestamp": "03:18:00",
+      "timestamp_seconds": 11880.0,
+      "frame_number": 11880,
+      "slide_number": 77,
+      "description": "Slide 77"
+    },
+    {
+      "timestamp": "03:19:20",
+      "timestamp_seconds": 11960.0,
+      "frame_number": 11960,
+      "slide_number": 78,
+      "description": "Slide 78"
+    },
+    {
+      "timestamp": "03:19:30",
+      "timestamp_seconds": 11970.0,
+      "frame_number": 11970,
+      "slide_number": 79,
+      "description": "Slide 79"
+    },
+    {
+      "timestamp": "03:19:50",
+      "timestamp_seconds": 11990.0,
+      "frame_number": 11990,
+      "slide_number": 80,
+      "description": "Slide 80"
+    },
+    {
+      "timestamp": "03:20:20",
+      "timestamp_seconds": 12020.0,
+      "frame_number": 12020,
+      "slide_number": 81,
+      "description": "Slide 81"
+    },
+    {
+      "timestamp": "03:21:20",
+      "timestamp_seconds": 12080.0,
+      "frame_number": 12080,
+      "slide_number": 82,
+      "description": "Slide 82"
+    },
+    {
+      "timestamp": "03:21:30",
+      "timestamp_seconds": 12090.0,
+      "frame_number": 12090,
+      "slide_number": 83,
+      "description": "Slide 83"
+    },
+    {
+      "timestamp": "03:21:40",
+      "timestamp_seconds": 12100.0,
+      "frame_number": 12100,
+      "slide_number": 84,
+      "description": "Slide 84"
+    },
+    {
+      "timestamp": "03:22:00",
+      "timestamp_seconds": 12120.0,
+      "frame_number": 12120,
+      "slide_number": 85,
+      "description": "Slide 85"
+    },
+    {
+      "timestamp": "03:23:00",
+      "timestamp_seconds": 12180.0,
+      "frame_number": 12180,
+      "slide_number": 86,
+      "description": "Slide 86"
+    },
+    {
+      "timestamp": "03:23:10",
+      "timestamp_seconds": 12190.0,
+      "frame_number": 12190,
+      "slide_number": 87,
+      "description": "Slide 87"
+    },
+    {
+      "timestamp": "03:23:40",
+      "timestamp_seconds": 12220.0,
+      "frame_number": 12220,
+      "slide_number": 88,
+      "description": "Slide 88"
+    },
+    {
+      "timestamp": "03:25:10",
+      "timestamp_seconds": 12310.0,
+      "frame_number": 12310,
+      "slide_number": 89,
+      "description": "Slide 89"
+    },
+    {
+      "timestamp": "03:25:30",
+      "timestamp_seconds": 12330.0,
+      "frame_number": 12330,
+      "slide_number": 90,
+      "description": "Slide 90"
+    },
+    {
+      "timestamp": "03:26:00",
+      "timestamp_seconds": 12360.0,
+      "frame_number": 12360,
+      "slide_number": 91,
+      "description": "Slide 91"
+    },
+    {
+      "timestamp": "03:28:30",
+      "timestamp_seconds": 12510.0,
+      "frame_number": 12510,
+      "slide_number": 92,
+      "description": "Slide 92"
+    },
+    {
+      "timestamp": "03:28:40",
+      "timestamp_seconds": 12520.0,
+      "frame_number": 12520,
+      "slide_number": 93,
+      "description": "Slide 93"
+    },
+    {
+      "timestamp": "03:29:10",
+      "timestamp_seconds": 12550.0,
+      "frame_number": 12550,
+      "slide_number": 94,
+      "description": "Slide 94"
+    },
+    {
+      "timestamp": "03:31:00",
+      "timestamp_seconds": 12660.0,
+      "frame_number": 12660,
+      "slide_number": 95,
+      "description": "Slide 95"
+    },
+    {
+      "timestamp": "03:31:10",
+      "timestamp_seconds": 12670.0,
+      "frame_number": 12670,
+      "slide_number": 96,
+      "description": "Slide 96"
+    },
+    {
+      "timestamp": "03:31:30",
+      "timestamp_seconds": 12690.0,
+      "frame_number": 12690,
+      "slide_number": 97,
+      "description": "Slide 97"
+    },
+    {
+      "timestamp": "03:32:20",
+      "timestamp_seconds": 12740.0,
+      "frame_number": 12740,
+      "slide_number": 98,
+      "description": "Slide 98"
+    },
+    {
+      "timestamp": "03:32:40",
+      "timestamp_seconds": 12760.0,
+      "frame_number": 12760,
+      "slide_number": 99,
+      "description": "Slide 99"
+    },
+    {
+      "timestamp": "03:33:30",
+      "timestamp_seconds": 12810.0,
+      "frame_number": 12810,
+      "slide_number": 100,
+      "description": "Slide 100"
+    }
+  ],
+  "summary": {
+    "total_slides": 100,
+    "total_duration": "03:33:30"
+  }
+}

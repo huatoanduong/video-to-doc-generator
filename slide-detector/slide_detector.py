@@ -58,7 +58,7 @@ class SlideChangeDetector:
 
         # Adjust parameters based on sensitivity
         if sensitivity == "high":
-            self.frame_interval = 2
+            self.frame_interval = 1
             self.ssim_threshold = 0.90
             self.histogram_threshold = 0.10
         elif sensitivity == "low":
@@ -73,7 +73,7 @@ class SlideChangeDetector:
 
         logger.info(f"Initialized detector with {sensitivity} sensitivity")
         logger.info(
-            f"Frame interval: {self.frame_interval}, SSIM threshold: {self.ssim_threshold}")
+            f"Frame interval: {self.frame_interval}, SSIM threshold: {self.ssim_threshold}, Histogram threshold: {self.histogram_threshold}")
 
     def calculate_histogram_similarity(self, frame1: np.ndarray, frame2: np.ndarray) -> float:
         """Calculate histogram similarity between two frames."""
