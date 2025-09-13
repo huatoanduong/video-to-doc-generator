@@ -22,3 +22,6 @@ torch>=2.8.0
 tqdm>=4.67.1
 typing_extensions>=4.14.1
 urllib3>=2.5.0
+sentence-transformers>=5.1.0
+ruptures>=1.1.10
+syntok>=1.4.4
